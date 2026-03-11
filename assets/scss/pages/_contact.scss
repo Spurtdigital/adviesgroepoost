@@ -1,0 +1,40 @@
+.contact{
+    &-content{
+        &__form{
+            background-color: $dark;
+            padding: 30px 40px;
+            border-radius: $border-radius;
+        }
+        ul{
+            @include reset-list();
+            li{
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.social-media{ 
+    margin-top: 25px;
+    ul{
+        @include reset-list();
+        display: flex;
+        gap: 15px;
+        li{
+            a{
+                background-color: $dark;
+                color: $white;
+                line-height: 35px;
+                height: 35px;
+                width: 35px;
+                text-align: center;
+                display: block;
+                border-radius: $border-radius;
+                span{
+                    display: none;
+                }    
+            }
+        }
+    }
+}

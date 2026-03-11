@@ -1,0 +1,36 @@
+.header{
+    &-acties{
+        padding: 300px 0 100px 0;
+        background-color: $dark;
+        position: relative;
+        &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $dark;
+            opacity: 0.25;
+            z-index: 2;
+            content: ''
+        }
+        img{
+            @include img-abs-center();
+            z-index: 0;
+        }
+        .container{
+            position: relative;
+            z-index: 3;
+        }
+        &__title{
+            @include font-size(64px);
+            color: $white;
+        }
+        &__btn{
+            height: 64px;
+            line-height: 64px;
+            @include font-size(20px);
+        }
+ 
+    }
+}

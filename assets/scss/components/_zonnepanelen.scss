@@ -1,0 +1,100 @@
+.zonnepanelen{
+    &-form{
+        background-color: $gray-100;
+        &__inner{
+            background-color: $dark;
+            padding: 30px;
+            border-radius: $border-radius; 
+            color: $white;
+            form{       
+                input{
+                    background-color: $dark!important;
+                    border: 1px solid rgba($white, 0.5)!important;
+                    color: $white!important;
+                }
+            }
+            .btn-primary, .wpcf7 input[type=submit]{
+                background-color: $primary!important;
+                color: $white!important;
+                margin: 0 auto!important;
+                text-align: center!important;
+                width: auto;
+                line-height: 40px;
+                height: 40px;
+                padding: 0 30px;
+                border-radius: 30px;
+                border:0!important;
+            }
+        }
+        &__map{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            strong{
+                @include font-size(20px);
+            }
+            @include media-breakpoint-down(lg){
+                height: 375px;
+            }
+            @include media-breakpoint-down(sm){
+                height: 300px;
+            }
+            img{
+                position: absolute;
+                top: -80px;
+                right: -100px;
+                width: calc(100% + 100px);
+                height:  calc(100% + 50px);
+                object-fit: contain;
+                @include media-breakpoint-down(xl){
+                    top: -50px;
+                    right: -75px;
+                    width: calc(100% + 50px);
+                    height:  100%;
+                }
+                @include media-breakpoint-down(lg){
+                    height: 350px;
+                    width: 100%;
+                    top: -25px;
+                    right: -25px;
+                }
+                @include media-breakpoint-down(sm){
+                    height: 275px;
+                    width: 100%;
+                    top: 20px;
+                    right: -25px;
+                }
+            }
+            a{
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                color: white;
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+.form-alert{
+    display: none;
+    line-height: 35px;
+    height: 35px;
+    width: 100%;
+    @include font-size(13px);
+    margin-top: 20px;
+    &.--succes{
+        background-color: $success;
+        color: $white;
+        display: block;
+    }
+    &.--notice{
+        background-color: rgba($white, 30%);
+        display: block;
+        @include font-size(12px);
+
+    }
+}

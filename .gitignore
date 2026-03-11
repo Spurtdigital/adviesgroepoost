@@ -1,0 +1,7 @@
+# exclude node modules eenzo
+node_modules/
+# exclude build output
+dist/
+build/
+
+    

@@ -1,0 +1,180 @@
+.vc{
+    &-container{
+        border: 1px solid $gray-100;
+    }
+    &-header{
+
+    }
+    &-step{
+        &-header{
+            padding: 24px;
+            border-bottom: 1px solid $gray-100;
+            @include media-breakpoint-down(sm){
+                padding: 16px;
+            }
+            &__count{
+                background-color: $gray-100;
+                color: $primary;
+                height: 32px;
+                width: 32px;
+                line-height: 32px;
+                display: block;
+                text-align: center;
+                margin-right: 12px;
+                border-radius: 4px;
+            }
+            strong{
+                @include font-size(17px)
+            }
+        }
+        &-content{
+            padding: 24px;
+            border-bottom: 1px solid $gray-100;
+            display: none;
+            @include media-breakpoint-down(sm){
+                padding: 16px;
+            }
+            &__next{
+                cursor: pointer;
+                background-color: $green;
+                padding: 12px 18px 12px 24px;
+                border-radius: 4px;
+                color: $white;
+                i{
+                    @include font-size(14px);
+                }
+            }
+        }
+        &-form{
+            &__label{
+                font-weight: bold;
+                margin-bottom: 4px;
+                display: block;
+                @include font-size(14px);
+                color: $dark;
+            }
+            .form-check{
+                margin-left: 0;
+                padding-left: 0;
+                &:not(:last-child){
+                    margin-bottom: 12px;
+                }
+                label{
+                    border: 1px solid $gray-100;
+                    padding: 8px 16px 8px 36px;
+                    border-radius: 8px;
+                    position: relative;
+                    width: 100%;
+                    &:before{
+                        position: absolute;
+                        left: 8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        height: 20px;
+                        width: 20px;
+                        line-height: 20px;
+                        text-align: center;
+                        background-color: $gray-100;
+                        content: '';
+                        border-radius: 4px;
+                        color: $primary;
+                        @include font-size(12px);
+                    }
+                }
+                input{
+                    &:checked{
+                        &+label{
+                            background-color: rgba($green, 0.35);
+                            color: $dark;
+                            &:before{
+                                position: absolute;
+                                background-color: $green;
+                                content: '\f00c';
+                                font-family: 'Font Awesome 6 Sharp';
+                                border-radius: 4px;
+                                color: $white;
+                                @include font-size(12px);
+                            
+                            }
+                        }
+                    }
+                    display: none;
+                }
+            }
+        }
+        &.is-valid{
+            .vc-step{
+                &-header__count{
+                    position: relative;
+                    &:before{
+                        position: absolute;
+                        left: -8px;
+                        top: -8px;
+                        height: 16px;
+                        width: 16px;
+                        line-height: 16px;
+                        background-color: $green;
+                        content: '\f00c';
+                        font-family: 'Font Awesome 6 Sharp';
+                        border-radius: 8px;
+                        color: $white;
+                        @include font-size(12px);
+                    }
+                }
+                &-content__next{
+                    background-color: $gray-100;
+                    color: $primary;
+                }
+            }
+        }
+        &.active{
+            .vc-step{
+                &-content{
+                    display: block;
+                }
+            }
+        }
+        &.disabled{
+            .vc-step{
+                &-header{
+                    opacity: 0.5;
+                }
+            }
+        }
+
+    }
+    &-summary{
+        position: relative;
+        i{
+            opacity: 0;
+            visibility: hidden;
+        }
+        &.is-updating{
+            i{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                @include font-size(24px);
+                z-index: 5;
+                color: $primary;
+                opacity: 1;
+                visibility: visible;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;    
+                background-color: rgba($gray-100, 0.35);
+                z-index: 3;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}

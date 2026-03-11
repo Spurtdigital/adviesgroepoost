@@ -1,0 +1,106 @@
+.layout-method{
+    background-color: $gray-100;
+    padding: 70px 0;
+    &-steps{
+        padding-left: 60px;
+        border-left: 1px dotted $dark;
+        @include media-breakpoint-down(lg){
+            padding-left: 30px;
+        }
+        @include media-breakpoint-down(sm){
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+    }
+    &-step{
+        position: relative;
+        &.is-active{
+            .layout-method-step__number{
+                background-color: $dark;
+                color: $white;
+            }
+        }
+        &.show{
+            .layout-method-step__content{
+                display: block;
+            }
+            .layout-method-step__number{
+                background-color: $dark;
+                color: $white;
+            }
+        }
+        &:not(:last-child){
+            margin-bottom: 25px;
+            @include media-breakpoint-down(lg){
+                margin-bottom: 20px;
+            }
+        }
+        &__number{
+            position: absolute;
+            left: -75px;
+            top: 0;
+            height: 30px;
+            width: 30px;
+            border-radius: 30px;
+            border: 1px solid $dark;
+            background-color: $gray-100;
+            color: $dark;
+            text-align: center;
+            @include media-breakpoint-down(lg){
+                left: -45px;
+            }
+            @include media-breakpoint-down(sm){
+                height: 25px;
+                width: 25px;
+                line-height: 25px;
+                @include font-size(12px);
+                left: -45px;
+                
+            }
+        }
+        &__title{
+            @include font-size(17px);
+            font-weight: bold;
+            cursor: pointer;
+            @include media-breakpoint-down(sm){
+                @include font-size(16px);
+            }
+        }
+        &__content{
+            display: none;
+            @include media-breakpoint-down(sm){
+                @include font-size(15px);
+            }
+            a{
+                color: $white;
+            }
+        }
+    }
+    &.--dark{
+        background-color: $dark;
+        color: $white;
+        h3{
+            color: $white;
+        }
+        .layout-method{
+            &-steps{
+                border-left: 1px solid $white;
+            }
+            &-step{
+                &.is-active{
+                    .layout-method-step__number{
+                        background-color: $white;
+                        color: $dark;
+                    }
+                }
+                &.show{
+                    .layout-method-step__number{
+                        background-color: $white;
+                        color: $dark;
+                    }
+                }
+            }
+        }
+    }
+}
+

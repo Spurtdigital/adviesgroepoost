@@ -1,0 +1,137 @@
+.price-form{
+    position: fixed;
+    max-width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11000;
+    &__close{
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        background-color: $white;
+        color: $primary;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all .3s ease;
+        &:hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    @include media-breakpoint-down(lg){
+        max-width: 520px;
+        min-width: 500px
+    }
+    @include media-breakpoint-down(sm){
+        max-width: calc(100% - 30px);
+        width: 100%;
+        min-width: unset;
+    }
+    &__wrapper{
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        overflow: scroll;
+        &.is-active{
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .3s ease .2s, visibility .3s ease .2s;
+        }
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba($gray-300, 0.8);
+        }
+    }
+    .wpcf7{
+        display: none;
+    }
+    &-header{
+        background-color: #E9F2E0;
+        border-radius: 24px 24px 0 0;
+        &__step{
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px 18px 4px 18px;
+            @include media-breakpoint-down(sm){
+                padding: 10px 8px 2px 10px;
+            }
+            &.is-active{
+                border-bottom: 2px solid $secondary;
+            }
+            i, strong{
+                display: block;
+            }
+            i{
+                @include font-size(28px);
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &-content{
+        padding: 32px 40px;
+        background-color: $white;
+        @include media-breakpoint-down(sm){
+            padding: 16px 20px;
+            p{
+                display: none;
+            }
+        }
+        &-dynamic{
+            padding: 10px 0;
+        }
+    }
+    &-footer{
+        background-color: $gray-100;
+        padding: 12px 40px;
+        border-radius: 0 0 24px 24px;
+    }
+    &-button{
+        background-color: $secondary;
+        color:$white;
+        font-weight: bold;
+        padding: 0 12px;
+        line-height: 44px;
+        height: 44px;
+        width: 100%;
+        text-decoration: none;
+        position: relative;
+        border-radius: 8px;
+        display: block;
+        button{
+            display: none;
+        }
+        &:hover{
+            color: $white;
+        }
+        i{
+            position: absolute;
+            right: 16px;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+    }
+}
+
+
+html{
+    &.locking-scroll{
+        overflow: hidden;
+    }
+}

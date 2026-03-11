@@ -1,0 +1,82 @@
+{
+    "key": "group_5e8e0ff429203",
+    "title": "Header opties",
+    "fields": [
+        {
+            "key": "field_5e8e0ff9f8e02",
+            "label": "Header",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e8e0ffef8e03",
+            "label": "Custom header code",
+            "name": "custom_header_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "De code wat hier wordt geplaatst wordt in de < header > geplaatst.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e8e102f271dd",
+            "label": "Google Analytics",
+            "name": "google_analytics",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "U kunt hier uw Google Analytics code plaatsen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "modified": 1672951410
+}

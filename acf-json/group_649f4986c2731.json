@@ -1,0 +1,44 @@
+{
+    "key": "group_649f4986c2731",
+    "title": "Single - Dienst",
+    "fields": [
+        {
+            "key": "field_649f4986d900d",
+            "label": "In formulier tonen",
+            "name": "in_formulier_tonen",
+            "type": "true_false",
+            "instructions": "Vink dit veld aan als hij getoond moet worden in het adviesgesprek formulier",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dienst"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1688160709
+}

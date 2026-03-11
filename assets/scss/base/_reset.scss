@@ -1,0 +1,323 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#wpadminbar {
+	clip-path: inset(0 calc(100% - 35px) 0 0);
+
+	@media screen and (max-width: 782px) {
+		display: none !important;
+	}
+
+	&:hover {
+		clip-path: unset;
+	}
+}
+
+html {
+	overflow-x: hidden;
+
+	body {
+		overflow-x: hidden;
+	}
+
+	&.lock {
+		overflow-y: hidden;
+
+		body {
+			overflow-y: hidden;
+			overflow-x: hidden;
+		}
+	}
+
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding: 0 20px;
+		}
+	}
+}
+
+.content-row {
+	.lead {
+		p {
+			@include font-size(16px);
+			line-height: 33px;
+		}
+	}
+
+	p {
+		@include font-size(14.5px);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	a:not(.btn) {
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin-bottom: 30px;
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 15px;
+		}
+	}
+
+	h1 {
+		@include media-breakpoint-down(md) {
+			@include font-size(24px);
+		}
+	}
+
+	h2,
+	h3 {
+		@include media-breakpoint-down(md) {
+			@include font-size(22px);
+		}
+
+		@include media-breakpoint-down(sm) {
+			@include font-size(20px);
+		}
+	}
+
+	h4,
+	h5 {
+		@include media-breakpoint-down(md) {
+			@include font-size(20px);
+		}
+
+		@include media-breakpoint-down(sm) {
+			@include font-size(18px);
+		}
+	}
+}
+
+.small-content {
+	h1,
+	h2,
+	h3,
+	h4 {
+		margin-bottom: 15px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 10px;
+		}
+	}
+	h1 {
+		@include font-size(21px);
+		@include media-breakpoint-down(md) {
+			@include font-size(18px);
+		}
+	}
+
+	h2,
+	h3 {
+		@include font-size(19px);
+		@include media-breakpoint-down(md) {
+			@include font-size(17px);
+		}
+	}
+
+	h4,
+	h5 {
+		@include font-size(17px);
+		@include media-breakpoint-down(md) {
+			@include font-size(15px);
+		}
+	}
+}
+
+::-moz-selection {
+	/* Code for Firefox */
+	background: rgba($primary, 0.15);
+}
+
+::selection {
+	background: rgba($primary, 0.15);
+}
+
+.reset-list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.fw-medium {
+	font-weight: medium;
+}
+
+.fw-medium {
+	a {
+		font-weight: 500;
+	}
+}
+
+.slick-margin {
+	/* the slides */
+	.slick-slide {
+		margin: 0 15px;
+	}
+
+	/* the parent */
+	.slick-list {
+		margin: 0 -15px;
+	}
+	&.--small {
+		/* the slides */
+		.slick-slide {
+			margin: 0 10px;
+		}
+
+		/* the parent */
+		.slick-list {
+			margin: 0 -10px;
+		}
+	}
+}
+
+.slick-box-shadow {
+	.slick-list {
+		overflow: visible;
+	}
+	.slick-slide {
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease;
+		&.slick-active,
+		&.slick-current {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.overflow-visibel {
+	overflow: visible;
+}
+
+p {
+	@include media-breakpoint-down(lg) {
+		@include font-size(15px);
+	}
+	@media screen and (max-width: 450px) {
+		@include font-size(14px);
+		line-height: 25px;
+	}
+}
+
+.list {
+	&__links {
+		display: flex;
+		gap: 15px;
+		li {
+			padding: 0 15px;
+			line-height: 35px;
+			height: 35px;
+			border-radius: 30px;
+			background-color: $gray-100;
+			position: relative;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.codedropz-upload-wrapper {
+	.codedropz {
+		&-upload-handler {
+			border: 2px dashed $dark;
+		}
+	}
+	.codedropz-upload-inner h3 {
+		@include font-size(18px);
+	}
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
+	display: none;
+}
+
+.hide-xs {
+	@media screen and (max-width: 460px) {
+		display: none;
+	}
+}
+
+.img-abs-center {
+	@include img-abs-center(cover, center);
+}
+
+.service-outro {
+	ul {
+		columns: 3;
+		column-gap: 14px;
+		@include media-breakpoint-down(xl) {
+			columns: 2;
+		}
+		@include media-breakpoint-down(sm) {
+			columns: 1;
+		}
+		a {
+			@include font-size(14px);
+		}
+	}
+}
+
+.modal {
+	z-index: 9500;
+	&-backdrop {
+		z-index: 9400;
+	}
+}
+
+a {
+	font {
+		line-height: 1;
+		display: inline-block;
+		margin-top: -4px;
+	}
+}
+
+.algolia-autocomplete {
+	top: 108px !important;
+	.aa-dropdown-menu {
+		border: 0;
+		background-color: $gray-100;
+		box-shadow: transparent;
+		margin-top: -10px;
+		padding-top: 10px;
+		border-radius: 10px;
+	}
+	.suggestion-post-content {
+		display: none !important;
+		a {
+			color: $primary;
+			em {
+				color: $primary;
+			}
+		}
+	}
+}
+
+.content-container{
+	p{
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}

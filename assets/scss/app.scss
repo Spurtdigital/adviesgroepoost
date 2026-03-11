@@ -1,0 +1,49 @@
+// --- UTILS
+@import "~bootstrap/scss/functions";
+@import "utils/functions";
+@import "utils/variables";
+@import "utils/mixins";
+
+// --- BOOTSTRAP
+@import "vendors/bootstrap";
+
+// --- BASE
+@import "base/reset";
+@import "base/type";
+
+// --- COMPONENTS
+@import "components/block";
+@import "components/buttons";
+@import "components/faq";
+@import "components/zonnepanelen";
+
+@import "components/components";
+@import "components/forms";
+@import "components/pricingform";
+
+// --- LAYOUT
+@import "layout/headers";
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/panel";
+@import "layout/builder";
+@import "layout/form";
+@import "layout/method";
+@import "layout/breadcrumbs";
+@import "layout/reviews";
+@import "layout/notice";
+@import "layout/test";
+@import "layout/matrix";
+@import "layout/megamenu";
+
+// --- PAGES
+@import "pages/home";
+@import "pages/contact";
+@import "pages/acties";
+@import "pages/whatsapp";
+@import "pages/zonnepanelen";
+@import "pages/locaties";
+
+// --- EXTRA
+@import '~@fancyapps/fancybox/dist/jquery.fancybox.css';
+@import 'slick-carousel/slick/slick.scss';
