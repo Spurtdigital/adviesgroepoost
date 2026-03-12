@@ -20,8 +20,7 @@ if ( ! function_exists( 'creators_setup' ) ) :
             'vloerisolatiemenu' => esc_html__( 'Vloerisolatie menu', 'creators' ),
             'hrglasmenu' => esc_html__( 'HR glas menu', 'creators' ),
             'warmtepompenmenu' => esc_html__( 'Warmtepompen menu', 'creators' ),
-            
-			// creators_spouwmuurisolatiemenu
+            // creators_spouwmuurisolatiemenu
             'servicemenu' => esc_html__( 'Diensten menu', 'creators' ),
             'zonnepanelenmenu' => esc_html__( 'Zonnepanelen menu', 'creators' ),
             'aboutmenu' => esc_html__( 'about menu', 'creators' ),

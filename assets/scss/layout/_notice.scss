@@ -1,1 +1,60 @@
-// Legacy placeholder partial kept for backward-compatible imports.
+.notice{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9500;
+    @include media-breakpoint-down(sm){
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        right: unset;  
+        width: calc(100% - 20px);
+    }
+    &__close{
+        position: absolute;
+        right: 8px;
+        top: 0;
+        i{
+            color: $primary
+        }
+    }
+    &__inner{
+        max-width: 450px;
+        background-color: $gray-100;
+        box-shadow: 0 3px 30px rgba($black, 0.15);
+        padding: 30px;
+        @include media-breakpoint-down(md){
+            padding: 20px;
+        }
+        @include media-breakpoint-down(sm){
+            padding: 15px;
+            max-width: 500px;
+        }
+    }
+    &__reviews{
+        @include font-size(14px);
+        ul{
+            @include font-size(14px);
+            color: $yellow;
+            margin-right: 5px;
+        }
+    }
+    &__title{
+        @include font-size(22px);
+        color: $dark;
+        @media screen and (max-width:425px) {
+            @include font-size(18px);
+        }
+    }
+    &__content{
+        p{
+            @include font-size(14px);
+            @include media-breakpoint-down(sm){
+                display: none;
+            }
+        }
+        small{
+            @include font-size(12px);
+        }
+    }
+}

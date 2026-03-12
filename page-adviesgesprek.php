@@ -168,28 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
-<script>
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-        return null;
-    }
 
-    function populateTrafficSourceInput() {
-        const trafficSource = getCookie('traffic_source');
-        const inputElement = document.getElementById('js-origin-field');
-        if (inputElement && trafficSource) {
-     		document.getElementById('js-origin-field').setAttribute('value',trafficSource);
-			console.log('123');
-			console.log(trafficSource)
-        }
-		
-    }
-
-
-document.addEventListener('DOMContentLoaded', populateTrafficSourceInput);
-</script>
 
 <script>
 function getParameterByName(name) {
@@ -209,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (huisnummer) {
             document.getElementById('huisnummer').value = huisnummer;
         }
+        console.log(getParameterByName('postcode'));
     }, 300);
 });
 

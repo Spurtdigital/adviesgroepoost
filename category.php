@@ -1,11 +1,13 @@
 <?php get_header(); $term = get_queried_object();?>
 
+
 <section class="header-single">
     <div class="container">
         <div class="offset-xl-2">
             <div class="header-single__content">
                 <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<div class="breadcrumbs">','</div>' ); }?>
                 <h1 class="display-1 text-white"><?php single_cat_title();?></h1>
+              
             </div>
         </div>
     </div>
@@ -46,5 +48,8 @@
         </div>
     </div>
 </section>
+
+
+
 
 <?php get_footer();?>

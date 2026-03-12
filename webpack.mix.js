@@ -43,7 +43,6 @@ mix
 		],
 	})
 	.copyDirectory("assets/images", "dist/images")
-	.copyDirectory("assets/fonts", "dist/fonts")
 	.setPublicPath("dist")
 	.purgeCss({
 		content: [path.join(__dirname, "./**/*.php")],

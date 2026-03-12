@@ -450,27 +450,6 @@
             }
         }
     }
-    &-product{
-        padding: 20px 14px;
-        height: 100%;
-        background-color: $white;
-        border-radius: 12px;
-        @include font-size(14px);
-        &__media{
-            height: 200px;
-            img{
-                object-fit: contain;
-            }
-        }
-        .btn{
-            line-height: 40px;
-            height: 40px;
-            padding: 0 16px;
-        }
-    }
-    &.slick-slide{
-        height: 100%;
-    }
 }
 
 .author{
@@ -598,17 +577,4 @@
         transform: translate(-50%, -50%);
         object-fit: contain;
     }
-}
-
-.slick-height-fix{
-    .slick-track
-{
-    display: flex !important;
-}
-
-.slick-slide
-{
-    height: inherit !important;
-}
-
 }

@@ -14,7 +14,7 @@
                         $gemeente = $gemeenten[$i];
                 ?>
                         <div class="global-gemeenten__block">
-                            <img loading="lazy" fetchpriority="low" src="<?php echo spurt_image($gemeente['logo']['url'], 150, 9999); ?>" alt="">
+                            <img loading="lazy" fetchpriority="low" src="<?php echo spurt_image($gemeente['logo']['url'], 200, 9999); ?>" alt="">
                         </div>
                 <?php
                     }
@@ -73,7 +73,7 @@
 			<div class="row gx-3 gx-md-0 gx-lg-2 gx-xl-3">
 				<div class="col-lg-6 col-md-4">
 					<div class="footer-top-media">
-						<img loading="lazy" src="<?php echo spurt_image(get_field( 'footer_top_image','options' )['url'], 620, 9999);?>" alt="<?php echo get_field( 'footer_top_image','options' )['alt'];?>">
+						<img loading="lazy" src="<?php echo get_field( 'footer_top_image','options' )['url'];?>" alt="<?php echo get_field( 'footer_top_image','options' )['alt'];?>">
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-8">
@@ -104,9 +104,11 @@
 					<nav class="footer__menu">
                         <ul>
                             <li class="position-relative"><a target="_blank" class="stretched-link" href="https://www.google.com/maps/place/Adviesgroep+Oost+b.v./@52.2855357,6.5680754,17z/data=!4m7!3m6!1s0x80abe90f3bd6686f:0x3e1882dd7ed2636a!8m2!3d52.2855324!4d6.5702694!9m1!1b1"><?php echo get_field( 'algemeen_straatnaam', 'options' );?> <br> <?php echo get_field( 'algemeen_postcode', 'options' );?> <?php echo get_field( 'algemeen_plaats', 'options' );?></a></li>
+
                         </ul>
                     </nav>
 				</div>
+				
                 <div class="col-xl-2 col-lg-3 col-md-6 ">
                     <strong class="footer-middle__title">Isolatie <span class="js-footer-toggle footer__toggle">+</span></strong>
                     <nav class="footer__menu">

@@ -14,7 +14,7 @@
                         <img loading="lazy" src="<?php echo $row['afbeelding_met_achtergrond']['url']; ?>" alt="">
                     </div>
                     <div class="author__content">
-                        <strong><?php echo $row['voornaam']; ?></strong> <small>Staat voor je klaar</small>
+                        <strong><?php echo $row['voornaam']; ?> <?php echo $row['achternaam']; ?></strong> <small>Staat voor je klaar</small>
                         <ul class="reset-list d-flex gap-1">
                             <li><a href="tel:<?php echo get_field('algemeen_telefoonnummer','options');?>">Bel mij</a></li>
                             <li><a href="<?php echo get_field('whatsapp_link','options'); ?>">App mij</a></li>

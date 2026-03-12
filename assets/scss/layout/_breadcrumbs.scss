@@ -1,1 +1,14 @@
-// Legacy placeholder partial kept for backward-compatible imports.
+.breadcrumbs{
+    color: $white;
+    @include font-size(14px);
+    a{
+        color: $white;
+        @include font-size(14px);
+    }
+    &.--dark{
+        color: $dark;
+        a{
+            color: $dark
+        }
+    }
+}

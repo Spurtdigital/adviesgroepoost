@@ -3,7 +3,7 @@
     <?php while ( have_rows('contentbuilder' ) ) : the_row(); ?>
         <?php if ( get_row_layout() == 'layout01' ) : // content?>
             <?php if(get_sub_field( 'vinkjes_tonen' )): $contentcheck = 'show__checks'; endif; ?>
-            <div class="content-row <?php if(get_sub_field( 'kleiner_weergeven' )): echo 'small-content'; endif;?> <?php echo isset($contentcheck) ? $contentcheck : ''; ?>">
+            <div class="content-row <?php if(get_sub_field( 'kleiner_weergeven' )): echo 'small-content'; endif;?> <?php echo $contentcheck; ?>">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 <?php if(get_sub_field( 'introductie_tekst' )): echo 'lead'; endif; if(get_sub_field( 'kleiner_weergeven' )): echo 'col-xl-7'; endif;?>">
@@ -53,50 +53,55 @@
                             <h2 class="display-2"><?php echo get_sub_field( 'titel' );?></h2>
                             <?php echo get_sub_field( 'tekst' ); ?>
                             <?php if ( have_rows('faq') ) : ?>
-    <div class="faq-wrapper">
-        <?php while ( have_rows('faq') ) : the_row(); ?>
-            <div class="faq-item js-faq">
-                <header class="faq-item__header js-faq-toggle">
-                    <span class="faq-item__title fw-bold"><?php echo esc_html(get_sub_field('vraag')); ?></span>
-                    <span class="faq-item__toggler"></span>
-                </header>
-                <main class="faq-item__content js-faq-content">
-                    <?php echo wp_kses_post(get_sub_field('antwoord')); ?>
-                </main>
-            </div>
-        <?php endwhile; ?>
-    </div>
+                            <div class="faq-wrapper">
+                                <?php while ( have_rows('faq') ) : the_row(); ?>
+                                    <div class="faq-item js-faq">
+                                        <header class="faq-item__header js-faq-toggle">
+                                            <span class="faq-item__title"><?php echo esc_html(get_sub_field('vraag')); ?></span>
+                                            <span class="faq-item__toggler"></span>
+                                        </header>
+                                        <main class="faq-item__content js-faq-content">
+                                            <?php echo wp_kses_post(get_sub_field('antwoord')); ?>
+                                        </main>
+                                    </div>
+                                <?php endwhile; ?>
+                            </div>
 
-    <?php
-    $faq_items = get_field('faq');
-    if ($faq_items && count($faq_items) > 0) :
-    ?>
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                    <?php 
-                    $total_faqs = count($faq_items);
-                    $i = 1;
-                    foreach ($faq_items as $faq) :
-                        $question = htmlspecialchars($faq['vraag'], ENT_QUOTES, 'UTF-8');
-                        $answer = htmlspecialchars(strip_tags($faq['antwoord']), ENT_QUOTES, 'UTF-8');
-                    ?>
-                    {
-                        "@type": "Question",
-                        "name": "<?php echo $question; ?>",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "<?php echo $answer; ?>"
-                        }
-                    }<?php echo $i < $total_faqs ? ',' : ''; ?>
-                    <?php $i++; endforeach; ?>
-                ]
-            }
-        </script>
-    <?php endif; ?>
-<?php endif; ?>
+                            <?php
+                            $faq_items = get_sub_field('faq');
+                            if (is_array($faq_items) && !empty($faq_items)) :
+                                $faq_schema_entities = array();
+                                foreach ($faq_items as $faq_item) {
+                                    $question = isset($faq_item['vraag']) ? wp_strip_all_tags($faq_item['vraag']) : '';
+                                    $answer = isset($faq_item['antwoord']) ? wp_strip_all_tags($faq_item['antwoord']) : '';
+
+                                    if ($question === '' || $answer === '') {
+                                        continue;
+                                    }
+
+                                    $faq_schema_entities[] = array(
+                                        '@type' => 'Question',
+                                        'name' => $question,
+                                        'acceptedAnswer' => array(
+                                            '@type' => 'Answer',
+                                            'text' => $answer,
+                                        ),
+                                    );
+                                }
+
+                                if (!empty($faq_schema_entities)) :
+                                    $faq_schema = array(
+                                        '@context' => 'https://schema.org',
+                                        '@type' => 'FAQPage',
+                                        'mainEntity' => $faq_schema_entities,
+                                    );
+                            ?>
+                            <script type="application/ld+json"><?php echo wp_json_encode($faq_schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
+                            <?php
+                                endif;
+                            endif;
+                            ?>
+                        <?php endif; ?>
                             
                         </div>
                     </div>
@@ -140,11 +145,11 @@
                         <div class="col-lg-10">
                             <?php get_template_part( 'template-parts/components/component','builder-form' ); ?>
 
-                           <?php /*
+                           <?php 
                            $form = get_sub_field('grafity_forms');
                             if($form):
                             gravity_form($form['id']);
-                            endif; */ 
+                            endif;
                            ?>
                         </div>
                     </div>
@@ -365,7 +370,7 @@
                                                      <img loading="lazy" src=" <?php echo get_sub_field('afbeelding')['url']; ?>" alt="">
                                                 </div>
                                                 <div class="block-adviseur__content">
-                                                    <strong><?php echo get_sub_field( 'voornaam' );?> <?php if(get_sub_field( 'achternaam' )): echo get_sub_field('achternaam'); endif; ?></strong>
+                                                    <strong><?php echo get_sub_field( 'voornaam' );?> <?php echo get_sub_field( 'achternaam' );?></strong>
                                                 </div>
                                             </div>
                                         </div>
@@ -514,60 +519,6 @@
                     </div>
                 </div>
             </section>
-        <?php elseif ( get_row_layout() == 'layout20' ) : // Product blokken?>
-            <div class="content-row bg-light py-5">
-                <div class="container">
-                    <div class="text-center">
-                        <h3 class="display-3"><?php the_sub_field( 'titel' );?></h3>
-                        <?php if( get_sub_field( 'tekstvlak_boven' ) ):
-                            echo get_sub_field('tekstvlak_boven');
-                        endif;?>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-12">
-                            <div class="js-content-productslider slick-margin slick-height-fix">
-                                <?php if ( have_rows('producten') ) : ?>
-                                
-                                    <?php while( have_rows('producten') ) : the_row(); ?>
-                                
-                                    <div class="block-product h-100">
-                                            <div class="block-product__media position-relative">
-                                                <img class="img-abs-center" src="<?php echo get_sub_field('afbeelding')['url']; ?>" alt="<?php echo get_sub_field('afbeelding')['url']; ?>">
-                                            </div>
-                                            <div class="block-product__content">
-                                                <strong class="display-5 mb-lg-2 mb-1 d-block"><?php echo get_sub_field('titel'); ?></strong>
-                                                <?php if ( have_rows('usps') ) : ?>
-                                                <ul class="reset-list">
-                                                    <?php while( have_rows('usps') ) : the_row(); ?>
-                                                
-                                                    <li><i class="fa-sharp fa-solid fa-circle-check text-success me-1"></i> <?php the_sub_field('usp'); ?> </li>
-                                                
-                                                    <?php endwhile; ?>
-                                                
-                                                <?php endif; ?>
-                                                </ul>
-                                                <small class="d-block mt-1 mb-lg-2 mb-1"><?php echo get_sub_field( 'afsluitende_tekst' ); ?></small>
-                                               <div class="text-center">
-                                                    <a href="<?php echo get_sub_field('link')['url']; ?>" class="btn btn-primary text-center align-items-center" id=""><?php echo get_sub_field('link')['title']; ?></a>
-                                               </div>
-                                            </div>
-                                        </div>
-                                
-                                    <?php endwhile; ?>
-                                
-                                <?php endif; ?>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <?php if( get_sub_field( 'tekstvlak_beneden' ) ): ?>
-                    <div class="text-center content-container mt-lg-3 mt-2">
-                          <?php echo get_sub_field('tekstvlak_beneden');?>
-                    </div>
-                    <?php endif;?>
-                </div>
-            </section>
-
         <?php endif; endwhile; ?>
     </section>
 <?php endif; ?>
