@@ -17,6 +17,7 @@
     </div>
 </section>
 
+<?php if ( function_exists( 'gravity_form' ) ) : ?>
 <section class="bg-light pt-5">
     <div class="container">
         <div class="row gx-10">
@@ -26,12 +27,13 @@
             </div>
             <div class="col-lg-8">
                 <div class="row">
-                    <?php gravity_form( 2, false, false, false, '', false );?>
+                    <?php gravity_form( 2, false, false, false, '', false ); ?>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<?php endif; ?>
 <div class="zonnepanelen-numbers pt-5">
         <div class="container">
             <div class="row gy-2 gy-lg-3">

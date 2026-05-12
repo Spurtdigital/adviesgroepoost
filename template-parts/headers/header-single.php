@@ -25,5 +25,5 @@
             </div>
         </div>
     </div>
-    <img fetchpriority="high" src="<?php echo spurt_image($featured_img_url, 1440, 9999);?>" alt="<?php the_title();?>">
+    <img fetchpriority="high" src="<?php echo spurt_image($featured_img_url, 1920, 9999);?>" alt="<?php the_title();?>">
 </section>

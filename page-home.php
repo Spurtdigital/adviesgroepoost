@@ -1,7 +1,8 @@
 <?php /*Template Name: Page - Home */ get_header();?>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
 
 <section class="home-hero">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <div class="container">
         <div class="row">
             <div class="col-xxl-6 col-xl-8 col-lg-8">
@@ -85,7 +86,7 @@
         <div class="row gx-lg-5">
             <div class="col-lg-6 mb-2 mb-lg-0">
                 <div class="content-split__media d-none d-lg-block">
-                    <img src="<?php echo spurt_image(get_field( 'intro_afbeelding' )['url'],720,9999)?>" alt="<?php echo get_field( 'intro_afbeelding' )['alt']?>" <?php if(get_sub_field( 'afbeelding_contain' )): echo'style="object-fit:contain"'; endif;?>>
+                    <img src="<?php echo spurt_image(get_field( 'intro_afbeelding' )['url'],1080,9999)?>" alt="<?php echo get_field( 'intro_afbeelding' )['alt']?>" <?php if(get_sub_field( 'afbeelding_contain' )): echo'style="object-fit:contain"'; endif;?>>
                 </div>
             </div>
             <div class="col-lg-6 py-1">
