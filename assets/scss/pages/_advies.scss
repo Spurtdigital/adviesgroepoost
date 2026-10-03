@@ -1,0 +1,468 @@
+// De globale reset zet html/body op overflow-x: hidden, wat position: sticky
+// binnen deze pagina blokkeert (de aside met adviseur/reviews/stats). Alleen
+// op deze template-body overrulen — html blijft ongemoeid, en zonder
+// bleed-elementen op deze pagina levert dit geen horizontale scrollbar op.
+body.page-template-page-advies {
+    overflow-x: visible;
+
+    // De gedeelde page-header (breadcrumb + H1) centreert zichzelf in een
+    // smallere col-xl-9; hieronder gebruiken we de volle container-breedte
+    // (col-xl-8 + col-xl-4). Op deze pagina de header daarmee laten uitlijnen.
+    .page-header {
+        .row.justify-content-center {
+            justify-content: flex-start;
+        }
+
+        @include media-breakpoint-up(xl) {
+            .col-xl-9 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.advice-page {
+    &__intro {
+        margin-bottom: 12px;
+    }
+
+    &__form-block {
+        border-radius: $border-radius;
+
+        .wpcf7-form {
+            margin-top: 10px;
+
+            label {
+                @include font-size(14px);
+            }
+        }
+
+        // Alleen déze submit-knop groen — via CSS-variabelen zodat het
+        // wint van de globale .btn-primary-styling ongeacht import-volgorde.
+        // Let op: geen ".wpcf7-submit" in de selector — die class komt van
+        // het CF7-plugin en staat nergens letterlijk in de theme-bestanden,
+        // waardoor PurgeCSS (production build) de regel anders weggooit.
+        input[type='submit'] {
+            --#{$prefix}btn-bg: #{$success};
+            --#{$prefix}btn-border-color: #{$success};
+            --#{$prefix}btn-hover-bg: #{shade-color($success, 10%)};
+            --#{$prefix}btn-hover-border-color: #{shade-color($success, 10%)};
+            --#{$prefix}btn-active-bg: #{shade-color($success, 10%)};
+            --#{$prefix}btn-active-border-color: #{shade-color($success, 10%)};
+        }
+    }
+
+    &.advice-page--offertecheck {
+        .wpcf7 textarea {
+            height: 130px !important;
+        }
+    }
+
+    &__form-usps {
+        li {
+            @include font-size(13px);
+            display: flex;
+            align-items: center;
+            line-height: 1.4;
+        }
+    }
+
+    &__company-usps {
+        li {
+            @include font-size(13px);
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+
+            + li {
+                margin-top: 6px;
+            }
+        }
+    }
+
+    &__form-header {
+        border-bottom: 1px solid $gray-300;
+    }
+
+    // --- Stappen (formulier)
+    &__step {
+        + .advice-page__step {
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid $gray-300;
+        }
+    }
+
+    &__step-title {
+        @include font-size(18px);
+        font-weight: $font-weight-bold;
+        margin-bottom: 2px;
+    }
+
+    &__step-hint {
+        @include font-size(14px);
+        color: $gray-600;
+        margin-bottom: 14px;
+    }
+
+    // --- Categorieën (stap 1) — 2 op mobiel, 3 naast elkaar erboven (grid van 9)
+    &__categories {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        @include media-breakpoint-up(sm) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__category {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 14px 15px;
+        border-radius: $border-radius-lg;
+        border: 1.5px solid $gray-300;
+        background-color: $white;
+        cursor: pointer;
+        text-align: left;
+        transition: all .15s ease;
+
+        &:hover {
+            border-color: $secondary;
+        }
+
+        &--featured {
+            background-color: $gray-100;
+            border-color: $gray-400;
+        }
+
+        &.is-active {
+            background-color: tint-color($secondary, 88%);
+            border-color: $secondary;
+            box-shadow: 0 6px 14px -10px rgba($secondary, .8);
+        }
+    }
+
+    &__category-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    &__category-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+        border-radius: $border-radius-sm;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        &--fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $gray-100;
+            color: $gray-500;
+            @include font-size(13px);
+        }
+    }
+
+    &__category-label {
+        flex: 1;
+        @include font-size(14.5px);
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    &__category-mark {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include font-size(11px);
+        font-weight: $font-weight-bold;
+        background-color: $gray-300;
+        color: $gray-300;
+        transition: all .15s ease;
+    }
+
+    &__category.is-active .advice-page__category-mark {
+        background-color: $secondary;
+        color: $white;
+    }
+
+    &__category-hint {
+        @include font-size(12.5px);
+        color: $gray-600;
+        line-height: 1.35;
+    }
+
+    // --- Subopties (per gekozen categorie)
+    &__groups {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 18px;
+
+        &:empty {
+            margin-top: 0;
+        }
+    }
+
+    &__group {
+        background-color: $white;
+        border: 1px solid $gray-300;
+        border-radius: $border-radius-lg;
+        padding: 14px 16px 16px;
+    }
+
+    &__group-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        @include font-size(14.5px);
+        font-weight: 600;
+    }
+
+    &__group-remove {
+        margin-left: auto;
+        background: none;
+        border: 0;
+        padding: 0;
+        @include font-size(12.5px);
+        color: $gray-600;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    &__chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    &__chip {
+        padding: 9px 14px;
+        border-radius: $border-radius-pill;
+        @include font-size(13.5px);
+        font-weight: 500;
+        border: 1.5px solid $gray-300;
+        background-color: $gray-100;
+        cursor: pointer;
+        transition: all .15s ease;
+
+        &.is-active {
+            background-color: tint-color($secondary, 88%);
+            border-color: $secondary;
+            color: shade-color($secondary, 20%);
+        }
+    }
+
+    // --- Samenvatting
+    &__summary {
+        margin-top: 18px;
+        padding: 14px 16px;
+        background-color: $white;
+        border: 1px solid $gray-300;
+        border-radius: $border-radius-lg;
+    }
+
+    &__summary-label {
+        @include font-size(12px);
+        font-weight: $font-weight-bold;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: $gray-600;
+        margin-bottom: 10px;
+    }
+
+    &__summary-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        @include font-size(13.5px);
+        color: $gray-600;
+
+        span {
+            background-color: $gray-100;
+            border: 1px solid $gray-300;
+            border-radius: $border-radius-pill;
+            padding: 6px 12px;
+            @include font-size(13px);
+            color: $body-color;
+        }
+
+        .advice-page__summary-empty {
+            background: none;
+            border: 0;
+            padding: 0;
+            color: $gray-600;
+        }
+    }
+
+    // --- Aside
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: sticky;
+        top: 20px;
+    }
+
+    &__advisor {
+        overflow: hidden;
+        border: 1px solid $gray-300;
+    }
+
+    &__advisor-media {
+        aspect-ratio: 16/9;
+        position: relative;
+        background-color: $gray-100;
+
+        img {
+            @include img-abs-center(cover, center);
+        }
+    }
+
+    &__advisor-content {
+        padding: 18px 20px 20px;
+
+        p {
+            @include font-size(13.5px);
+            color: $gray-600;
+            margin: 6px 0 14px;
+        }
+    }
+
+    &__advisor-name {
+        @include font-size(16px);
+        font-weight: $font-weight-bold;
+    }
+
+    &__advisor-role {
+        @include font-size(12.5px);
+        color: $gray-600;
+    }
+
+    &__stats {
+        padding: 20px;
+
+        &-number {
+            @include font-size(28px);
+            font-weight: $font-weight-bold;
+        }
+
+        &-text {
+            @include font-size(13.5px);
+            line-height: 1.5;
+            opacity: .75;
+        }
+    }
+
+    // --- Hoe het werkt (slider)
+    &__how-slider {
+        .slick-slide {
+            height: auto;
+
+            > div {
+                height: 100%;
+            }
+        }
+
+        .slick-track {
+            display: flex;
+            align-items: stretch;
+        }
+    }
+
+    &__how-card {
+        background-color: $white;
+        border: 1px solid $gray-300;
+        border-radius: $border-radius-lg;
+        padding: 22px;
+        height: 100%;
+    }
+
+    &__how-number {
+        @include font-size(12.5px);
+        font-weight: $font-weight-bold;
+        color: $secondary;
+        letter-spacing: .06em;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    &__how-title {
+        @include font-size(17px);
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    &__how-text {
+        @include font-size(15px);
+        color: $gray-600;
+    }
+
+    // --- FAQ
+    &__faq {
+        .faq-wrapper {
+            max-width: 800px;
+        }
+    }
+
+}
+
+.advice-sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    background-color: rgba($white, .95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid $gray-300;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &__text {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+
+        strong {
+            @include font-size(14.5px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        span {
+            @include font-size(12px);
+            color: $gray-600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .btn {
+        white-space: nowrap;
+    }
+}

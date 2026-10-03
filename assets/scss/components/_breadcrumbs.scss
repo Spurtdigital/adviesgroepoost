@@ -1,0 +1,26 @@
+.breadcrumbs{
+    display: inline-flex;
+    background-color: $white;
+    padding: 4px 16px;
+    border-radius: 24px;
+    @include font-size(14px);
+    span{
+        background-color: $white;
+        height: 28px;
+        line-height: 28px;
+        color: rgba($black, 0.5);
+        i{
+            @include font-size(10px);
+        }
+        a{
+            color: rgba($black, 0.5);
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .breadcrumb_last{
+            color: $black;
+        }
+    }
+}

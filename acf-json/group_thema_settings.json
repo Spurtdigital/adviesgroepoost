@@ -1,0 +1,1393 @@
+{
+    "key": "group_thema_settings",
+    "title": "Thema Settings",
+    "fields": [
+        {
+            "key": "field_footer_tab",
+            "label": "Footer",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_footer_top_image",
+            "label": "Footer Top Afbeelding",
+            "name": "footer_top_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_footer_top_title",
+            "label": "Footer Top Titel",
+            "name": "footer_top_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "De onafhankelijke expertise van Adviesgroep Oost",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_footer_top_content",
+            "label": "Footer Top Inhoud",
+            "name": "footer_top_content",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolorem alias impedit eum, quis ab cumque quod nisi asperiores et doloribus numquam sequi minima vitae quo illo consectetur. Aut, et!",
+            "placeholder": "",
+            "rows": 4,
+            "maxlength": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_footer_top_button_link",
+            "label": "Footer Top Button Link",
+            "name": "footer_top_button_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_gemeenten_tab",
+            "label": "Gemeenten",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_gemeenten_title",
+            "label": "Gemeenten Titel",
+            "name": "gemeenten_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Wij zijn actief in onder andere de volgende gemeenten",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_gemeenten",
+            "label": "Gemeenten",
+            "name": "gemeenten",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Wordt willekeurig gesorteerd en toont maximaal 20 logos.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "button_label": "Gemeente toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_gemeente_logo",
+                    "label": "Logo",
+                    "name": "logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_mega_menu_tab",
+            "label": "Mega Menu",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_mega_menu_items",
+            "label": "Menu Items",
+            "name": "mega_menu_items",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Voeg maximaal 5 menu items toe",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 5,
+            "button_label": "Menu item toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_mega_menu_item_title",
+                    "label": "Titel",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    }
+                },
+                {
+                    "key": "field_mega_menu_item_link",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Link voor het hoofd menu item",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_mega_menu_item_columns",
+                    "label": "Kolommen",
+                    "name": "columns",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "Voeg kolommen toe met menu items",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "min": 0,
+                    "max": 4,
+                    "button_label": "Kolom toevoegen",
+                    "sub_fields": [
+                        {
+                            "key": "field_mega_menu_column_title",
+                            "label": "Kolomtitel",
+                            "name": "column_title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_mega_menu_column_items",
+                            "label": "Menu items",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "min": 0,
+                            "max": 0,
+                            "button_label": "Item toevoegen",
+                            "sub_fields": [
+                                {
+                                    "key": "field_mega_menu_column_item_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "field_mega_menu_item_image",
+                    "label": "Afbeelding",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all"
+                },
+                {
+                    "key": "field_mega_menu_item_image_title",
+                    "label": "Afbeelding titel",
+                    "name": "image_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_header_tab",
+            "label": "Header",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_header_reviews_rating",
+            "label": "Reviews Rating",
+            "name": "header_reviews_rating",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Aantal sterren (1-5)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 5,
+            "min": 1,
+            "max": 5,
+            "step": 1
+        },
+        {
+            "key": "field_header_reviews_count",
+            "label": "Reviews Count",
+            "name": "header_reviews_count",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Bijv. 400+",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "400+"
+        },
+        {
+            "key": "field_header_usps",
+            "label": "USPs",
+            "name": "header_usps",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Voeg USPs toe voor in de header",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "button_label": "USP toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_header_usp_text",
+                    "label": "Tekst",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_global_cta_usps",
+            "label": "Globale CTA USP's",
+            "name": "global_cta_usps",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Globale USP's voor CTA blokken in templates.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 6,
+            "collapsed": "",
+            "button_label": "USP toevoegen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_global_cta_usp_text",
+                    "label": "Tekst",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_header_button_link",
+            "label": "Header Button",
+            "name": "header_button_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Link met knop tekst (title)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_kozijn_cta_tab",
+            "label": "Kozijnen",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_kozijn_usps",
+            "label": "Kozijnen USP's",
+            "name": "kozijn_usps",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Voeg USPs toe voor de single kozijnen header.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "button_label": "USP toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_kozijn_usp_text",
+                    "label": "Tekst",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    }
+                }
+            ]
+        },
+        {
+            "key": "field_kozijn_advies_cta_titel",
+            "label": "CTA titel",
+            "name": "kozijn_advies_cta_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Ondersteunt markdown, bijvoorbeeld **gratis adviesgesprek**.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Plan een **gratis adviesgesprek** bij u thuis",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_kozijn_advies_cta_tekst",
+            "label": "CTA tekst",
+            "name": "kozijn_advies_cta_tekst",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_kozijn_advies_cta_link",
+            "label": "CTA button",
+            "name": "kozijn_advies_cta_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Laat leeg voor automatische fallback naar de Adviesgesprek-pagina.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_kozijn_advies_cta_link_2",
+            "label": "CTA button 2",
+            "name": "kozijn_advies_cta_link_2",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Optioneel, laat leeg voor maar 1 knop.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_kozijn_adviseur_houding",
+            "label": "Adviseur houding",
+            "name": "kozijn_adviseur_houding",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Kies welke medewerkerhouding in de CTA wordt getoond.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "handen_over_elkaar": "Handen over elkaar",
+                "staand": "Staand",
+                "zittend": "Zittend",
+                "leunend": "Leunend",
+                "duim_omhoog": "Duim omhoog"
+            },
+            "default_value": "handen_over_elkaar",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_home_global_werkwijze_tab",
+            "label": "Werkwijze",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_home_global_steps",
+            "label": "Stappen",
+            "name": "stappen",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Globale werkwijze stappen voor de homepage.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "button_label": "Stap toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_home_global_step_title",
+                    "label": "Titel",
+                    "name": "titel",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_home_global_step_content",
+                    "label": "Tekst",
+                    "name": "tekst",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 3,
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_home_global_reviews_tab",
+            "label": "Reviews",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_home_global_reviews",
+            "label": "Reviews",
+            "name": "reviews",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Globale reviews voor de homepage slider. Er worden willekeurig maximaal 6 reviews getoond.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "button_label": "Review toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_home_global_review_name",
+                    "label": "Naam",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_home_global_review_rating",
+                    "label": "Rating",
+                    "name": "rating",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "Aantal sterren (1-5)",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 5,
+                    "min": 1,
+                    "max": 5,
+                    "step": 1
+                },
+                {
+                    "key": "field_home_global_review_content",
+                    "label": "Content",
+                    "name": "content",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 4,
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_medewerkers_tab",
+            "label": "Medewerkers",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_medewerkers",
+            "label": "Medewerkers",
+            "name": "medewerkers",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_medewerker_naam",
+            "button_label": "Medewerker toevoegen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_medewerker_naam",
+                    "label": "Naam",
+                    "name": "naam",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_medewerker_houding",
+                    "label": "Houding",
+                    "name": "houding",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "handen_over_elkaar": "Handen over elkaar",
+                        "staand": "Staand",
+                        "zittend": "Zittend",
+                        "leunend": "Leunend",
+                        "duim_omhoog": "Duim omhoog"
+                    },
+                    "default_value": "staand",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_medewerker_afbeelding",
+                    "label": "Afbeelding",
+                    "name": "afbeelding",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_advies_adviseur_sfeerfoto",
+            "label": "Sfeerfoto adviseur (adviesgesprek)",
+            "name": "advies_adviseur_sfeerfoto",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optioneel. Vervangt de portretfoto van de gekozen medewerker in de aside van het adviesgesprek-formulier door een sfeerfoto naar keuze. Leeg = foto van de medewerker.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_global_cta_tab",
+            "label": "Globale CTA",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "Algemene CTA-content voor het hele thema. De oude velden (fixedcta/websitecta/kozijn) worden alleen nog als fallback gebruikt.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_global_cta_titel",
+            "label": "Titel",
+            "name": "cta_global_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Ondersteunt markdown (bijv. **vet**).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_cta_tekst",
+            "label": "Tekst",
+            "name": "cta_global_tekst",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_global_cta_buttons",
+            "label": "Buttons",
+            "name": "cta_global_buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Voeg één of meerdere knoppen toe. Wordt ook gebruikt als globale fallback voor losse CTA-knoppen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Button toevoegen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_global_cta_button_link",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "60",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_global_cta_button_color",
+                    "label": "Kleur",
+                    "name": "color",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "40",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "primary": "Primary",
+                        "secondary": "Secondary",
+                        "outline-primary": "Outline Primary",
+                        "outline-secondary": "Outline Secondary",
+                        "outline-dark": "Outline Dark",
+                        "white": "White",
+                        "outline-white": "Outline White",
+                        "dark": "Dark",
+                        "light": "Light"
+                    },
+                    "default_value": "primary",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_global_cta_afbeelding",
+            "label": "Afbeelding",
+            "name": "cta_global_afbeelding",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Afbeelding in het CTA-blok (bijv. een adviseur).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_global_teksten_tab",
+            "label": "Extra teksten & links",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_global_news_titel",
+            "label": "Nieuwsblok titel",
+            "name": "news_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titel van het laatste-nieuws blok (bijv. op de homepage).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Het laatste nieuws",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_news_link",
+            "label": "Nieuwsblok button",
+            "name": "news_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Link naar het nieuwsoverzicht. Laat leeg voor automatische link naar de nieuwsoverzicht-pagina.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_global_header_reviews_tekst",
+            "label": "Reviews label (header)",
+            "name": "header_reviews_tekst",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Tekst achter het aantal reviews in de header.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "reviews",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_header_search_placeholder",
+            "label": "Zoekveld placeholder",
+            "name": "header_search_placeholder",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Placeholder tekst van het zoekveld in de header.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Waar kunnen we je mee helpen?",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_header_button_mobile_tekst",
+            "label": "Header knop – mobiel",
+            "name": "header_button_mobile_tekst",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Korte tekst van de header knop op kleine schermen. De volledige titel komt uit 'Header Button'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Advies aanvragen",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_contact_kvk_label",
+            "label": "Contact – KvK label",
+            "name": "contact_kvk_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Label vóór het KvK-nummer op de contactpagina.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "KvK-nummer ",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_contact_btw_label",
+            "label": "Contact – BTW label",
+            "name": "contact_btw_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Label vóór het BTW-nummer op de contactpagina.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "BTW-nummer ",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_footer_contact_titel",
+            "label": "Footer – Contact titel",
+            "name": "footer_contact_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_footer_kantoor_titel",
+            "label": "Footer – Kantoor titel",
+            "name": "footer_kantoor_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Kantoor",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_offerte_cta_link",
+            "label": "Offerte CTA button",
+            "name": "offerte_cta_link",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Knop 'Offerte aanvragen' op de kozijnen pagina's. Laat leeg voor de standaard fallback.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_global_dienst_cta_titel",
+            "label": "Diensten header CTA titel",
+            "name": "dienst_cta_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Titel van het CTA blok in de diensten/advies headers. Ondersteunt markdown (bijv. **vet**).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Plan een **gratis adviesgesprek** bij jou thuis",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_global_adviesgesprek_button_titel",
+            "label": "Adviesgesprek knop tekst",
+            "name": "adviesgesprek_button_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Tekst van de knop naar de Adviesgesprek-pagina in de diensten/advies headers.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Plan adviesgesprek",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-thema-velden"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1788778256
+}

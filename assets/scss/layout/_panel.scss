@@ -1,0 +1,106 @@
+.panel {
+    background-color: $white;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+    visibility: hidden;
+    width: 100vw;
+    z-index: 500;
+    padding: 140px 24px 16px 24px;
+
+    // Level 1: main nav items in panel
+    .header-main__nav > ul > li > a {
+        @include font-size(16px);
+        font-weight: 600;
+    }
+
+    // Mega-menu drawer styling (appears in panel on mobile)
+    .mega-menu.drawer-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        background: $white;
+        box-shadow: none;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.25s ease;
+        padding: 140px 24px 16px 24px;
+        transform: translateX(100%);
+        overflow-y: auto;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .js-mega-menu-back {
+            display: flex;
+            align-items: center;
+            gap: $spacer;
+            background: none;
+            border: none;
+            color: $primary;
+            cursor: pointer;
+            padding: 0 0 $spacer 0;
+            margin-bottom: $spacer;
+            font-weight: 600;
+            border-bottom: 1px solid $gray-200;
+            width: 100%;
+            font-size: inherit;
+
+            &:hover {
+                color: $gray-900;
+            }
+        }
+
+        // Reset Bootstrap row gutter so columns align with panel padding
+        .row {
+            --bs-gutter-x: 0;
+        }
+
+        // Level 2: column titles
+        strong {
+            @include font-size(15px);
+            padding-left: 0;
+        }
+
+        // Level 3: nav links
+        nav ul {
+            padding-left: 0;
+
+            li a {
+                @include font-size(14px);
+            }
+        }
+    }
+    .header-top__nav ul li a{
+        color: $dark;
+    }
+}
+
+body.lock {
+    .header-main {
+        border-radius: 0;
+
+        &:after {
+            display: none;
+        }
+    }
+
+    .panel {
+        opacity: 1;
+        visibility: visible;
+    }
+}

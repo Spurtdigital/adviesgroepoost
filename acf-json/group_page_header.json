@@ -1,0 +1,121 @@
+{
+    "key": "group_page_header",
+    "title": "Page Header",
+    "fields": [
+        {
+            "key": "field_page_title",
+            "label": "Hero Titel (H1)",
+            "name": "hero_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Laat leeg om de standaard paginatitel te gebruiken",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_page_intro",
+            "label": "Hero Tekst",
+            "name": "hero_tekst",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optionele introductiestekst onder de titel",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_page_header_buttons",
+            "label": "Hero Buttons",
+            "name": "hero_buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "button_label": "Button toevoegen",
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "sub_fields": [
+                {
+                    "key": "field_page_header_btn_link",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_page_header_btn_color",
+                    "label": "Kleur",
+                    "name": "color",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "choices": {
+                        "primary": "Primary",
+                        "secondary": "Secondary",
+                        "outline-primary": "Outline Primary",
+                        "outline-secondary": "Outline Secondary",
+                        "outline-dark": "Outline Dark",
+                        "white": "White",
+                        "outline-white": "Outline White",
+                        "dark": "Dark",
+                        "light": "Light"
+                    },
+                    "default_value": "primary",
+                    "return_format": "value"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1783763782
+}

@@ -1,0 +1,35 @@
+.product{
+    &-hero{
+        &__media{
+            padding-bottom: 82.5%;
+            background-color: $gray-100;
+            img{
+                object-fit: contain;
+                height: 75%;
+                width: 75%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-cta{
+            padding: 20px 180px 20px 20px;
+            position: relative;
+            img{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                object-fit: contain;
+                height: calc(100% + 40px);
+            }
+        }
+        @include font-size(15px);
+        ul{
+            li{
+                &:not(:last-child){
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}

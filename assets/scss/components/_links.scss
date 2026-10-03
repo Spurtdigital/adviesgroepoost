@@ -1,0 +1,13 @@
+// Links met icoon
+
+.link-with-icon {
+    i {
+        transition: color 0.3s ease;
+    }
+
+    &:hover {
+        i {
+            color: $secondary;
+        }
+    }
+}

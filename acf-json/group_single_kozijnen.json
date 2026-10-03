@@ -1,0 +1,349 @@
+{
+    "key": "group_single_kozijnen",
+    "title": "Single Kozijnen",
+    "fields": [
+        {
+            "key": "field_kozijn_intro_tekst",
+            "label": "Intro tekst",
+            "name": "kozijn_intro_tekst",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optionele introductietekst onder de titel in de single kozijnen header.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_kozijn_mogelijkheden_tab",
+            "label": "Mogelijkheden",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_kozijn_mogelijkheden_titel",
+            "label": "Titel",
+            "name": "kozijn_mogelijkheden_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Laat leeg voor automatische fallback: [post title] mogelijkheden.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_kozijn_mogelijkheden_intro",
+            "label": "Intro tekst",
+            "name": "kozijn_mogelijkheden_intro",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Optionele introductietekst boven de blokken.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_kozijn_mogelijkheden_blokken",
+            "label": "Mogelijkheden",
+            "name": "kozijn_mogelijkheden_blokken",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Voeg kozijn mogelijkheden toe met afbeelding en titel.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "min": 0,
+            "max": 0,
+            "button_label": "Mogelijkheid toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_kozijn_mogelijkheid_afbeelding",
+                    "label": "Afbeelding",
+                    "name": "afbeelding",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_kozijn_mogelijkheid_titel",
+                    "label": "Titel",
+                    "name": "titel",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_kozijn_split_tab",
+            "label": "Standaard Split",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "Wordt alleen getoond als de contentbuilder leeg is.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_kozijn_split_titel",
+            "label": "Titel",
+            "name": "kozijn_split_titel",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_kozijn_split_tekst",
+            "label": "Tekst",
+            "name": "kozijn_split_tekst",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0,
+            "default_value": ""
+        },
+        {
+            "key": "field_kozijn_split_button",
+            "label": "Button",
+            "name": "kozijn_split_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_kozijn_split_button_kleur",
+            "label": "Button kleur",
+            "name": "kozijn_split_button_kleur",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "primary": "Primary",
+                "secondary": "Secondary",
+                "outline-primary": "Outline Primary",
+                "outline-secondary": "Outline Secondary",
+                "outline-dark": "Outline Dark",
+                "white": "Wit",
+                "outline-white": "Outline Wit",
+                "dark": "Dark",
+                "light": "Light"
+            },
+            "default_value": "primary",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_kozijn_split_afbeelding",
+            "label": "Afbeelding",
+            "name": "kozijn_split_afbeelding",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_kozijn_split_afbeelding_links",
+            "label": "Afbeelding links",
+            "name": "kozijn_split_afbeelding_links",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "ui": 1,
+            "ui_on_text": "Ja",
+            "ui_off_text": "Nee",
+            "default_value": 0
+        },
+        {
+            "key": "field_kozijn_toon_contentbuilder",
+            "label": "Toon contentbuilder",
+            "name": "kozijn_toon_contentbuilder",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Standaard wordt de normale single-layout getoond. Zet aan om de contentbuilder op deze single te tonen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "ui": 1,
+            "ui_on_text": "Aan",
+            "ui_off_text": "Uit",
+            "default_value": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "kozijn"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "kozijnen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1784691600
+}

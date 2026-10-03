@@ -1,0 +1,42 @@
+// --- UTILS
+@import "bootstrap/scss/functions";
+@import "utils/variables";
+@import "utils/variables-dark";
+@import "utils/functions";
+@import "utils/mixins";
+
+// --- VENDORS
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
+@import "slick-carousel/slick/slick.css";
+@import "vendors/bootstrap";
+
+// --- BASE
+@import "base/reset";
+@import "base/type";
+@import "base/fonts";
+
+// --- COMPONENTS
+@import "components/buttons";
+@import "components/blocks";
+@import "components/breadcrumbs";
+@import "components/forms";
+@import "components/faq";
+@import "components/slider";
+@import "components/cta";
+@import "components/links";
+@import "components/algolia";
+
+// --- LAYOUT
+@import "layout/header";
+@import "layout/footer";
+@import "layout/panel";
+@import "layout/builder";
+
+// --- PAGES
+// (voeg hier page-specifieke imports toe)
+@import "pages/archive";
+@import "pages/advies";
+@import "pages/contact";
+@import "pages/ervaringen";
+@import "pages/home";
+@import "pages/product";

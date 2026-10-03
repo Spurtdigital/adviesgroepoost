@@ -1,0 +1,3811 @@
+{
+    "key": "group_page_builder",
+    "title": "Layout - Contentbuilder",
+    "fields": [
+        {
+            "key": "field_builder_kleiner_weergeven",
+            "label": "Kleiner weergeven",
+            "name": "builder_kleiner_weergeven",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Globale breedte voor de hele builder. Aan: tekst col-xl-8 en media col-xl-10. Uit: tekst col-xl-10 en media col-xl-11.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "ui": 1,
+            "ui_on_text": "Kleiner",
+            "ui_off_text": "Groter",
+            "default_value": 1
+        },
+        {
+            "key": "field_contentbuilder",
+            "label": "Contentbuilder",
+            "name": "contentbuilder",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": [
+                {
+                    "key": "layout_01_layout01",
+                    "name": "layout01",
+                    "label": "Tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_1_tekstvlak",
+                            "label": "Tekstvlak",
+                            "name": "tekstvlak",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_1_introductie_tekst",
+                            "label": "Introductie Tekst",
+                            "name": "introductie_tekst",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_1_kleiner_weergeven",
+                            "label": "Kleiner Weergeven",
+                            "name": "kleiner_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_1_vinkjes_tonen",
+                            "label": "Plusjes tonen",
+                            "name": "vinkjes_tonen",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_1_buttons",
+                            "label": "Buttons",
+                            "name": "buttons",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_649b13cd87026"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_cb_1_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_1_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_1_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_1_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_1_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_02_layout02",
+                    "name": "layout02",
+                    "label": "Split (Tekst + Afbeelding)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_2_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_2_afbeelding_links",
+                            "label": "Afbeelding Links",
+                            "name": "afbeelding_links",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_tekstvlak",
+                            "label": "Tekstvlak",
+                            "name": "tekstvlak",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_2_links",
+                            "label": "Links",
+                            "name": "links",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "multiple": 1,
+                            "allow_null": 1,
+                            "post_type": [],
+                            "taxonomy": [],
+                            "ui": 1,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_cb_2_afbeelding",
+                            "label": "Afbeelding",
+                            "name": "afbeelding",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_cb_2_afbeelding_contain",
+                            "label": "Afbeelding Contain",
+                            "name": "afbeelding_contain",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_verberg_mobiel",
+                            "label": "Verberg op Mobiel",
+                            "name": "verberg_mobiel",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_contain_afbeelding_groter_weergeven",
+                            "label": "Contain Afbeelding Groter",
+                            "name": "contain_afbeelding_groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_opties_tonen",
+                            "label": "Opties tonen",
+                            "name": "opties_tonen",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Vink dit veld aan als je opties zoals afbeelding 1, achtergrond kleur, en link blok wil tonen",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_buttons",
+                            "label": "Buttons",
+                            "name": "buttons",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_649b13cd87026"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_cb_2_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_2_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_2_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_03_layout03",
+                    "name": "layout03",
+                    "label": "FAQ",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_3_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_3_tekst",
+                            "label": "Tekst",
+                            "name": "tekst",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_3_faq",
+                            "label": "FAQ Items",
+                            "name": "faq",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Voeg faq items toe",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_cb_3_faq_vraag",
+                                    "label": "Vraag",
+                                    "name": "vraag",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_3_faq"
+                                },
+                                {
+                                    "key": "field_cb_3_faq_antwoord",
+                                    "label": "Antwoord",
+                                    "name": "antwoord",
+                                    "aria-label": "",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 0,
+                                    "delay": 0,
+                                    "default_value": "",
+                                    "parent_repeater": "field_cb_3_faq"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_cb_3_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_3_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_3_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_3_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_3_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_04_layout04",
+                    "name": "layout04",
+                    "label": "CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_4_handmatige_vulling",
+                            "label": "Handmatige Vulling",
+                            "name": "handmatige_vulling",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_4_cta_titel",
+                            "label": "CTA Titel",
+                            "name": "cta_titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_4_cta_tekst",
+                            "label": "CTA Tekst",
+                            "name": "cta_tekst",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_4_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_4_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_4_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_4_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_4_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_05_layout05",
+                    "name": "layout05",
+                    "label": "Form",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_5_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_5_tekst",
+                            "label": "Tekst",
+                            "name": "tekst",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "placeholder": "",
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_cb_5_formulier",
+                            "label": "Formulier",
+                            "name": "formulier",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "wpcf7_contact_form"
+                            ],
+                            "taxonomy": "",
+                            "filters": [],
+                            "return_format": "object",
+                            "min": "",
+                            "max": "",
+                            "elements": "",
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_cb_5_zonnepanelen_formulier",
+                            "label": "Zonnepanelen formulier?",
+                            "name": "zonnepanelen_formulier",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_5_grafity_forms",
+                            "label": "Grafity forms",
+                            "name": "grafity_forms",
+                            "aria-label": "",
+                            "type": "forms",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "post_object",
+                            "allow_null": 0,
+                            "multiple": 0
+                        },
+                        {
+                            "key": "field_cb_5_cf7_form",
+                            "label": "Contact Form 7",
+                            "name": "cf7_form",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "wpcf7_contact_form"
+                            ],
+                            "taxonomy": [],
+                            "allow_null": 1,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_cb_5_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_5_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_5_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_5_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_5_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_06_layout06",
+                    "name": "layout06",
+                    "label": "Afbeelding",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_6_afbeelding",
+                            "label": "Afbeelding",
+                            "name": "afbeelding",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_cb_6_video_link",
+                            "label": "Video Link",
+                            "name": "video_link",
+                            "aria-label": "",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_cb_6_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_6_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_6_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_6_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_6_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_07_layout07",
+                    "name": "layout07",
+                    "label": "Split + USPs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_7_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_7_tekstvlak",
+                            "label": "Tekstvlak",
+                            "name": "tekstvlak",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_7_afbeelding",
+                            "label": "Afbeelding",
+                            "name": "afbeelding",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_cb_7_afbeelding_contain",
+                            "label": "Afbeelding Contain",
+                            "name": "afbeelding_contain",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_7_afbeelding_links",
+                            "label": "Afbeelding Links",
+                            "name": "afbeelding_links",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_7_opties_tonen",
+                            "label": "Opties tonen",
+                            "name": "opties_tonen",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Vink dit veld aan als je opties zoals afbeelding 1, achtergrond kleur, en link blok wil tonen",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_7_usps",
+                            "label": "USPs",
+                            "name": "usps",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Voeg usps toe",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_cb_7_usp",
+                                    "label": "USP",
+                                    "name": "usp",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_7_usps"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_cb_7_buttons",
+                            "label": "Buttons",
+                            "name": "buttons",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_649b13cd87026"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_cb_7_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_7_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_7_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_7_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_7_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_08_layout08",
+                    "name": "layout08",
+                    "label": "Methode",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_8_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_8_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_8_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_8_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_8_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_09_layout09",
+                    "name": "layout09",
+                    "label": "Blokken",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_9_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_9_blokken",
+                            "label": "Blokken",
+                            "name": "blokken",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Voeg blokken toe",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_cb_9_icoon",
+                                    "label": "Icoon",
+                                    "name": "icoon",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_9_blokken"
+                                },
+                                {
+                                    "key": "field_cb_9_blok_titel",
+                                    "label": "Titel",
+                                    "name": "titel",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_9_blokken"
+                                },
+                                {
+                                    "key": "field_cb_9_blok_tekst",
+                                    "label": "Tekst",
+                                    "name": "tekst",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_9_blokken"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_cb_9_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_9_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_9_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_9_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_9_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_10_layout10",
+                    "name": "layout10",
+                    "label": "Notificatie",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_10_notificatie",
+                            "label": "Notificatie",
+                            "name": "notificatie",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_10_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_10_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_10_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_10_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_10_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_11_layout11",
+                    "name": "layout11",
+                    "label": "Notificatie met Titel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_11_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_11_links",
+                            "label": "Links",
+                            "name": "links",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "multiple": 1,
+                            "allow_null": 1,
+                            "post_type": [],
+                            "taxonomy": [],
+                            "ui": 1,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_cb_11_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_11_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_11_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_11_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_11_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_12_layout12",
+                    "name": "layout12",
+                    "label": "Related Posts",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_12_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_12_tekstvlak",
+                            "label": "Tekstvlak",
+                            "name": "tekstvlak",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_12_relations",
+                            "label": "Posts",
+                            "name": "relations",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "multiple": 1,
+                            "allow_null": 1,
+                            "post_type": [],
+                            "taxonomy": [],
+                            "ui": 1,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_cb_12_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_12_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_12_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_12_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_12_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_12_afbeelding_contain",
+                            "label": "Afbeeldingen contain weergeven",
+                            "name": "afbeelding_contain",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Toon de afbeeldingen volledig (object-fit contain) in plaats van bijgesneden.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_13_layout13",
+                    "name": "layout13",
+                    "label": "Tabel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_13_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_13_tekst",
+                            "label": "Tekst",
+                            "name": "tekst",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_13_tabel",
+                            "label": "Tabel",
+                            "name": "tabel",
+                            "aria-label": "",
+                            "type": "table",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_cb_13_kleiner_weergeven",
+                            "label": "Kleiner weergeven",
+                            "name": "kleiner_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_13_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_13_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_13_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_13_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_13_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_14_layout14",
+                    "name": "layout14",
+                    "label": "Adviseurs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_14_adviseurs_titel",
+                            "label": "Adviseurs Titel",
+                            "name": "adviseurs_titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_14_tekst",
+                            "label": "Tekst",
+                            "name": "tekst",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_14_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_14_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_14_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_14_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_14_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_15_layout15",
+                    "name": "layout15",
+                    "label": "Authors",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_15_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_15_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_15_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_15_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_15_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_16_layout16",
+                    "name": "layout16",
+                    "label": "Global CTA",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_16_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_16_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_16_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_16_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_16_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_17_layout17",
+                    "name": "layout17",
+                    "label": "Prijstabel",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_17_header",
+                            "label": "Header",
+                            "name": "header",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "button_label": "Voeg header toe",
+                            "min": 0,
+                            "max": 0,
+                            "rows_per_page": 20,
+                            "collapsed": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_cb_17_header_titel",
+                                    "label": "Titel",
+                                    "name": "titel",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_17_header"
+                                },
+                                {
+                                    "key": "field_cb_17_header_ondertitel",
+                                    "label": "Ondertitel",
+                                    "name": "ondertitel",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_17_header"
+                                },
+                                {
+                                    "key": "field_cb_17_header_prijs",
+                                    "label": "Prijs",
+                                    "name": "prijs",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_17_header"
+                                },
+                                {
+                                    "key": "field_cb_17_header_prijs_voorvoegsel",
+                                    "label": "Prijs voorvoegsel",
+                                    "name": "prijs_voorvoegsel",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "v.a. / p.m. en dergelijke",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_17_header"
+                                },
+                                {
+                                    "key": "field_cb_17_header_link",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_cb_17_header"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_cb_17_tabel",
+                            "label": "Tabel",
+                            "name": "tabel",
+                            "aria-label": "",
+                            "type": "table",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            }
+                        },
+                        {
+                            "key": "field_cb_17_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_17_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_17_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_17_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_17_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_18_layout18",
+                    "name": "layout18",
+                    "label": "Service Blokken",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_18_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_18_tekstvlak",
+                            "label": "Tekstvlak",
+                            "name": "tekstvlak",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0,
+                            "default_value": ""
+                        },
+                        {
+                            "key": "field_cb_18_blokken",
+                            "label": "Blokken",
+                            "name": "blokken",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Voeg blokken toe",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_cb_18_blok_afbeelding",
+                                    "label": "Afbeelding",
+                                    "name": "afbeelding",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": "",
+                                    "parent_repeater": "field_cb_18_blokken"
+                                },
+                                {
+                                    "key": "field_cb_18_blok_titel",
+                                    "label": "Titel",
+                                    "name": "titel",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_cb_18_blokken"
+                                },
+                                {
+                                    "key": "field_cb_18_blok_links",
+                                    "label": "Links",
+                                    "name": "links",
+                                    "aria-label": "",
+                                    "type": "post_object",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "multiple": 1,
+                                    "allow_null": 1,
+                                    "post_type": [],
+                                    "taxonomy": [],
+                                    "ui": 1,
+                                    "bidirectional_target": [],
+                                    "parent_repeater": "field_cb_18_blokken"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_cb_18_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_18_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_18_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_18_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_18_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_19_layout19",
+                    "name": "layout19",
+                    "label": "Kozijnen",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_19_kozijn_titel",
+                            "label": "Kozijn Titel",
+                            "name": "kozijn_titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_19_kozijnen_mogelijkheden",
+                            "label": "Kozijnen",
+                            "name": "kozijnen_mogelijkheden",
+                            "aria-label": "",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "multiple": 1,
+                            "allow_null": 1,
+                            "post_type": [],
+                            "taxonomy": [],
+                            "ui": 1,
+                            "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_cb_19_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_19_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_19_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_19_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_19_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "layout_20_layout20",
+                    "name": "layout20",
+                    "label": "Oplossingen",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_cb_20_titel",
+                            "label": "Titel",
+                            "name": "titel",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_cb_20_diensten",
+                            "label": "Diensten (optioneel)",
+                            "name": "diensten",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "Zoek en selecteer diensten; de volgorde kun je slepen. Laat leeg om alle top-level diensten te tonen.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "100",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "object",
+                            "post_type": [
+                                "dienst"
+                            ],
+                            "taxonomy": [],
+                            "post_status": [],
+                            "filters": [
+                                "search"
+                            ],
+                            "min": 0,
+                            "max": 0,
+                            "elements": ""
+                        },
+                        {
+                            "key": "field_cb_20_styling_tab",
+                            "label": "Styling",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "tab",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": false,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "placement": "left",
+                            "endpoint": 0,
+                            "selected": 0
+                        },
+                        {
+                            "key": "field_cb_20_bg_color",
+                            "label": "Achtergrond Kleur",
+                            "name": "achtergrond_kleur",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Voeg lichte achtergrondkleur toe",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_20_br_top",
+                            "label": "Border Radius Top",
+                            "name": "border_radius_top",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken bovenkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_20_br_bottom",
+                            "label": "Border Radius Bottom",
+                            "name": "border_radius_bottom",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Afgeronde hoeken onderkant",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_cb_20_groter_weergeven",
+                            "label": "Groter Weergeven",
+                            "name": "groter_weergeven",
+                            "aria-label": "",
+                            "type": "true_false",
+                            "instructions": "Groter weergeven (col-xl-10), standaard kleiner (col-xl-8)",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": "",
+                            "default_value": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ],
+            "button_label": "Voeg layout toe",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dienst"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "local"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Content builder met styling opties voor alle 19 layouts",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1788773958
+}

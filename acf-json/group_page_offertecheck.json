@@ -1,0 +1,179 @@
+{
+    "key": "group_page_offertecheck",
+    "title": "Page - Offertecheck",
+    "fields": [
+        {
+            "key": "field_page_offertecheck_intro_tab",
+            "label": "Intro",
+            "name": "",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_page_offertecheck_introductie",
+            "label": "Introductie",
+            "name": "advice_introductie",
+            "type": "wysiwyg",
+            "wrapper": {
+                "width": "100"
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_page_offertecheck_form_tab",
+            "label": "Formulier",
+            "name": "",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_page_offertecheck_form_id",
+            "label": "CF7 Form ID",
+            "name": "advice_form_id",
+            "type": "text",
+            "default_value": "b21e386",
+            "instructions": "Bijv. b21e386",
+            "wrapper": {
+                "width": "50"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_text_below_form",
+            "label": "Tekst Onder Formulier",
+            "name": "tekst_onder_het_formulier",
+            "type": "wysiwyg",
+            "wrapper": {
+                "width": "100"
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_page_offertecheck_form_titel",
+            "label": "Formulier titel",
+            "name": "offer_form_titel",
+            "type": "text",
+            "instructions": "Titel boven het formulier.",
+            "default_value": "Gratis offertecheck aanvragen",
+            "wrapper": {
+                "width": "100"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_usp_1",
+            "label": "USP 1",
+            "name": "offer_form_usp_1",
+            "type": "text",
+            "instructions": "Eerste USP onder het formulier.",
+            "default_value": "Binnen 24 uur reactie",
+            "wrapper": {
+                "width": "100"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_usp_2",
+            "label": "USP 2",
+            "name": "offer_form_usp_2",
+            "type": "text",
+            "instructions": "Tweede USP onder het formulier.",
+            "default_value": "Gratis advies op afstand",
+            "wrapper": {
+                "width": "100"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_usp_3_voor",
+            "label": "USP met teller – tekst vóór",
+            "name": "offer_form_usp_3_voor",
+            "type": "text",
+            "instructions": "Tekst vóór de teller van de derde USP.",
+            "default_value": "Meer dan ",
+            "wrapper": {
+                "width": "50"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_usp_3_na",
+            "label": "USP met teller – tekst ná",
+            "name": "offer_form_usp_3_na",
+            "type": "text",
+            "instructions": "Tekst ná de teller van de derde USP.",
+            "default_value": " offertes vergeleken",
+            "wrapper": {
+                "width": "50"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_children_titel",
+            "label": "Titel kindpagina's",
+            "name": "offer_children_titel",
+            "type": "text",
+            "instructions": "Titel boven de kindpagina's onder het formulier.",
+            "default_value": "Meer lezen over de offertecheck",
+            "wrapper": {
+                "width": "100"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_offer_tab",
+            "label": "Offerte USP's",
+            "name": "",
+            "type": "tab",
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_page_offertecheck_offer_title",
+            "label": "Titel",
+            "name": "offer_title",
+            "type": "text",
+            "default_value": "Waarom deze offertecheck?",
+            "wrapper": {
+                "width": "100"
+            }
+        },
+        {
+            "key": "field_page_offertecheck_offer_usps",
+            "label": "USP's",
+            "name": "offer_usps",
+            "type": "repeater",
+            "button_label": "USP toevoegen",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_page_offertecheck_offer_usp_text",
+                    "label": "USP",
+                    "name": "usp",
+                    "type": "text",
+                    "wrapper": {
+                        "width": "100"
+                    },
+                    "parent_repeater": "field_page_offertecheck_offer_usps"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-offertecheck.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0
+}

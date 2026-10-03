@@ -1,0 +1,199 @@
+{
+    "key": "group_6a5b9f8b4a0fb",
+    "title": "Single - Dienst",
+    "fields": [
+        {
+            "key": "field_6a5b9f8b9d46b",
+            "label": "In formulier tonen",
+            "name": "in_formulier_tonen",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6a5b9f8b9d46d",
+            "label": "Uitgelicht in adviesformulier",
+            "name": "formulier_uitgelicht",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Geeft deze categorie een lichte accentkleur, bijv. voor een totaalpakket. Het icoon in het formulier komt automatisch uit de 'Afbeelding' van deze dienst.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a5b9f8b9d46b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6a5b9f8b9d46e",
+            "label": "Hint (adviesformulier)",
+            "name": "formulier_hint",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Korte omschrijving onder het label in het adviesformulier.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a5b9f8b9d46b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Bijv. Spouwmuur, vloer, bodem of dak",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6a5b9f8b9d4711",
+            "label": "Hoort bij hoofdcategorie",
+            "name": "formulier_hoofdcategorie",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Laat leeg als dit zelf een hoofdcategorie is (stap 1). Kies een hoofdcategorie om deze dienst als suboptie daaronder te tonen.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a5b9f8b9d46b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "": "— Is zelf een hoofdcategorie —",
+                "isolatie": "Isolatie",
+                "kozijnen": "Kozijnen",
+                "glas": "Glas",
+                "zonnepanelen": "Zonnepanelen",
+                "warmtepomp": "Warmtepomp",
+                "airconditioning": "Airconditioning",
+                "overig": "Overig"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6a5b9f8b9d46f",
+            "label": "Subopties (adviesformulier)",
+            "name": "formulier_varianten",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Optioneel. Laat leeg om deze categorie als losse keuze te tonen zonder subopties.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6a5b9f8b9d46b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Suboptie toevoegen",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6a5b9f8b9d470",
+                    "label": "Naam",
+                    "name": "naam",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6a5b9f8b9d46f"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "dienst"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1788800000
+}

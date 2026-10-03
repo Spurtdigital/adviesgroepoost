@@ -1,0 +1,172 @@
+.block {
+    &-service {
+        border-radius: 6px;
+        overflow: hidden;
+        &__media {
+            padding-bottom: 50%;
+            position: relative;
+            img {
+                @include img-abs-center(cover, center);
+            }
+        }
+        &__content {
+            background-color: $gray-100;
+            padding: 10px 14px;
+            @include font-size(14px);
+        }
+    }
+    &-dienst {
+        background-color: $white;
+        border: 1px solid $gray-100;
+        border-radius: $border-radius-lg;
+        box-shadow: 0px 4px 10px rgba($black, 0.03);
+        transition:
+            box-shadow 0.25s ease,
+            transform 0.25s ease;
+        &:hover {
+            box-shadow: 0px 6px 14px rgba($black, 0.06);
+            transform: translateY(-2px);
+            .block-dienst__media {
+                img {
+                    transform: translate(-50%, -50%) scale(1.02);
+                }
+            }
+        }
+        &__media {
+            aspect-ratio: 3/2;
+            position: relative;
+            background-color: $gray-100;
+            border-radius: $border-radius-lg;
+            img {
+                height: 85%;
+                width: 85%;
+                top: 50%;
+                left: 50%;
+                object-fit: contain;
+                transform: translate(-50%, -50%);
+                transition: transform 0.25s ease-in-out;
+            }
+        }
+        &__content {
+            border-radius: $border-radius-lg;
+            padding: 10px 8px 10px 20px;
+            font-weight: 500;
+            @include font-size(14px);
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+    &-home {
+        &__about {
+            position: relative;
+            height: 100%;
+            padding: 32px 48px 32px 32px;
+            @include media-breakpoint-down(lg) {
+                padding: 24px;
+            }
+            &--alt {
+                padding-right: 224px;
+                @include media-breakpoint-down(xl) {
+                    padding: 24px 210px 24px 24px;
+                }
+                @include media-breakpoint-down(lg) {
+                    padding: 24px 300px 24px 24px;
+                }
+                @include media-breakpoint-down(md) {
+                    padding: 24px;
+                }
+            }
+            p {
+                @include font-size(14px);
+                @include media-breakpoint-down(xxl) {
+                    @include font-size(12px);
+                }
+            }
+            img {
+                position: absolute;
+                right: -52px;
+                bottom: 0;
+                height: calc(100% - 72px);
+                max-height: 280px;
+                object-fit: contain;
+                @include media-breakpoint-down(xl) {
+                    right: -24px;
+                    height: calc(100% - 140px);
+                    max-height: 220px;
+                }
+                @include media-breakpoint-down(lg) {
+                    right: 0;
+                    height: 220px;
+                    max-height: none;
+                }
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+            }
+        }
+    }
+    &-post {
+        &:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+        small{
+            @include font-size(12px);
+        }
+        &--alt {
+            .block-post__media {
+                background-color: $gray-100;
+                img {
+                    width: 80%;
+                    height: 80%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        &__media {
+            aspect-ratio: 5/4;
+            overflow: hidden;
+            img{
+                transition: transform 0.25s ease-in-out;
+            }
+        }
+        &__title{
+            @include font-size(15px);
+        }
+    }
+    &-review {
+        background-color: $white;
+        border: 1px solid $gray-100;
+        padding: 20px 22px;
+        @include font-size(13px);
+        border-radius: $border-radius-xxl;
+        ul {
+            display: flex;
+            align-content: center;
+            gap: 1px;
+            justify-content: center;
+            @extend .reset-list;
+            font-size: 12px;
+            i {
+                color: $secondary;
+            }
+        }
+    }
+    &-kozijn {
+        &__media {
+            padding-bottom: 72%;
+            img {
+                height: 75%;
+                width: 75%;
+                top: 50%;
+                left: 50%;
+                object-fit: contain;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
