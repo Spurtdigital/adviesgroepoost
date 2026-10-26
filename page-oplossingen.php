@@ -7,17 +7,30 @@
 	<div class="container">
 		<?php
 		$services_archive   = get_post_type_archive_link( 'diensten' );
-		$services_query     = new WP_Query(
-			[
-				'post_type'      => 'dienst',
-				'post_parent'    => 0,
-				'posts_per_page' => -1,
-				'orderby'        => [
-					'menu_order' => 'ASC',
-					'date'       => 'DESC',
-				],
-			]
-		);
+		$services_selection = get_field( 'oplossingen_diensten' );
+		$services_args      = [
+			'post_type'      => 'dienst',
+			'post_status'    => 'publish',
+			'post_parent'    => 0,
+			'posts_per_page' => -1,
+			'orderby'        => [
+				'menu_order' => 'ASC',
+				'date'       => 'DESC',
+			],
+		];
+
+		if ( ! empty( $services_selection ) ) {
+			$services_ids = array_filter( array_map( 'absint', wp_list_pluck( $services_selection, 'ID' ) ) );
+
+			if ( ! empty( $services_ids ) ) {
+				// Handmatige selectie overschrijft de automatische query, inclusief volgorde.
+				unset( $services_args['post_parent'] );
+				$services_args['post__in'] = $services_ids;
+				$services_args['orderby']  = 'post__in';
+			}
+		}
+
+		$services_query = new WP_Query( $services_args );
 		?>
 		<div class="d-flex align-items-center justify-content-between mb-lg-3 mb-2">
             <h2 class="display-4 fw-bold "><?php echo esc_html( get_field( 'oplossingen_services_title' ) ?: __( 'Waar kunnen we je mee helpen?', 'creators' ) ); ?></h2>

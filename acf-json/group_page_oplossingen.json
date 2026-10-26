@@ -38,6 +38,33 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_page_oplossingen_diensten",
+            "label": "Diensten (optioneel)",
+            "name": "oplossingen_diensten",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Zoek en selecteer diensten; de volgorde kun je slepen. Laat leeg om automatisch alle hoofd-diensten te tonen.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "object",
+            "post_type": [
+                "dienst"
+            ],
+            "taxonomy": [],
+            "post_status": [],
+            "filters": [
+                "search"
+            ],
+            "min": 0,
+            "max": 0,
+            "elements": ""
         }
     ],
     "location": [
