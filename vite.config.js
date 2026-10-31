@@ -31,7 +31,11 @@ const purgeCssPlugin = purgecss({
             // Contact Form 7 rendert zijn eigen markup/classes (net als
             // Gravity Forms hierboven) — nooit letterlijk in theme-bestanden.
             /^wpcf7-/,
-            /^checkbox-wrapper/
+            /^checkbox-wrapper/,
+            // Google reCAPTCHA injecteert deze classes via zijn eigen script
+            // (staan dus nooit in theme-bestanden en worden anders weggepurged).
+            /^grecaptcha/,
+            /^rc-anchor/
         ],
         // Behoud alle Bootstrap spacing utilities (m-, p-, gap-) met responsive prefixes
         greedy: [

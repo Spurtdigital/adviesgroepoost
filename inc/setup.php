@@ -64,11 +64,13 @@ if ( function_exists( 'ini_set' ) ) {
 
 /**
  * Verwijder door thema/plugins toegevoegde image sizes (custom sizes).
- * Standaardmaten (thumbnail, medium, large, medium_large, 1536x1536, 2048x2048) blijven bestaan.
+ * Standaardmaten (thumbnail, medium, medium_large, large) blijven bestaan zodat
+ * wp_get_attachment_image() een geldige srcset kan genereren en 'large'/'medium_large'
+ * niet terugvalt op de originele (te grote) afbeelding.
  */
 add_filter('intermediate_image_sizes', function ($sizes) {
     // lijst met WP-core maten die je WEL wilt houden
-    $keep = ['thumbnail'];
+    $keep = ['thumbnail', 'medium', 'medium_large', 'large'];
 
     // filter alle maten die niet in $keep zitten (dus: custom thema/plugin maten)
     return array_values(array_intersect($sizes, $keep));

@@ -95,7 +95,7 @@ if ( null === $buttons_array ) {
 
                             <?php if ( is_array( $advice_person ) && ! empty( $advice_person['afbeelding']['ID'] ) ) : ?>
                                 <div class="mb-2">
-                                    <?php echo wp_get_attachment_image( $advice_person['afbeelding']['ID'], 'medium', false, [ 'class' => 'img-fluid', 'alt' => esc_attr( $advice_person['naam'] ?? '' ) ] ); ?>
+                                    <img class="img-fluid" src="<?php echo esc_url( creators_resized_image_url( $advice_person['afbeelding']['url'] ?? '', 400 ) ); ?>" alt="<?php echo esc_attr( $advice_person['naam'] ?? '' ); ?>" loading="lazy" decoding="async">
                                 </div>
                             <?php endif; ?>
 

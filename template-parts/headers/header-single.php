@@ -42,7 +42,8 @@ if ( null === $buttons_array ) {
             <div class="row mb-lg-4 mb-3">
                 <div class="col-12">
                     <div class="rounded-3 page-header__media overflow-hidden position-relative">
-                        <?php the_post_thumbnail( 'full', [ 'class' => 'img-abs-center' ] ); ?>
+                        <?php $page_header_thumb = get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>
+                        <img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $page_header_thumb, 1600 ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" decoding="async" fetchpriority="high">
                     </div>
                 </div>
             </div>

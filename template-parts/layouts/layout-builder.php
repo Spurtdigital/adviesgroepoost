@@ -347,9 +347,9 @@ if ( ! function_exists( 'get_builder_fallback_media_image' ) ) {
 								</div>
 								<div class="content-cta__media">
 									<?php if ( is_array( $cta_image ) && ! empty( $cta_image['ID'] ) ) : ?>
-										<?php echo wp_get_attachment_image( $cta_image['ID'], 'medium', false, [ 'alt' => esc_attr( $cta_image['alt'] ?? '' ) ] ); ?>
+										<img src="<?php echo esc_url( creators_resized_image_url( $cta_image['url'] ?? '', 720 ) ); ?>" alt="<?php echo esc_attr( $cta_image['alt'] ?? '' ); ?>" loading="lazy" decoding="async">
 									<?php elseif ( is_string( $cta_image ) && ! empty( $cta_image ) ) : ?>
-										<img loading="lazy" src="<?php echo esc_url( $cta_image ); ?>" alt="">
+										<img loading="lazy" decoding="async" src="<?php echo esc_url( creators_resized_image_url( $cta_image, 720 ) ); ?>" alt="">
 									<?php endif; ?>
 								</div>
 							</div>
@@ -400,7 +400,7 @@ if ( ! function_exists( 'get_builder_fallback_media_image' ) ) {
 							<?php $single_image = get_sub_field( 'afbeelding' ) ?: get_builder_fallback_media_image(); ?>
 							<div class="content-media position-relative rounded-4 overflow-hidden">
 								<?php if ( $single_image ) : ?>
-									<img class="img-abs-center" loading="lazy" src="<?php echo esc_url( $single_image['url'] ); ?>" alt="<?php echo esc_attr( $single_image['alt'] ?? '' ); ?>">
+									<img class="img-abs-center" loading="lazy" decoding="async" src="<?php echo esc_url( creators_resized_image_url( $single_image['url'] ?? '', 1200 ) ); ?>" alt="<?php echo esc_attr( $single_image['alt'] ?? '' ); ?>">
 								<?php endif; ?>
 								
 								<?php if ( get_sub_field( 'video_link' ) ) : ?>
@@ -602,7 +602,7 @@ if ( ! function_exists( 'get_builder_fallback_media_image' ) ) {
 											<div class="block-adviseur">
 												<div class="block-adviseur__media --contain mb-2">
 													<?php if ( get_sub_field( 'afbeelding' ) ) : ?>
-														<img loading="lazy" src="<?php echo esc_url( get_sub_field( 'afbeelding' )['url'] ); ?>" alt="<?php echo esc_attr( get_sub_field( 'voornaam' ) . ' ' . get_sub_field( 'achternaam' ) ); ?>">
+														<img loading="lazy" decoding="async" src="<?php echo esc_url( creators_resized_image_url( get_sub_field( 'afbeelding' )['url'] ?? '', 600 ) ); ?>" alt="<?php echo esc_attr( get_sub_field( 'voornaam' ) . ' ' . get_sub_field( 'achternaam' ) ); ?>">
 													<?php endif; ?>
 												</div>
 												<div class="block-adviseur__content">
@@ -751,7 +751,7 @@ if ( ! function_exists( 'get_builder_fallback_media_image' ) ) {
 											<div class="block-service h-100">
 												<div class="block-service__media">
 													<?php if ( get_sub_field( 'afbeelding' ) ) : ?>
-														<img loading="lazy" src="<?php echo esc_url( get_sub_field( 'afbeelding' )['url'] ); ?>" alt="<?php echo esc_attr( get_sub_field( 'afbeelding' )['alt'] ); ?>">
+														<img loading="lazy" decoding="async" src="<?php echo esc_url( creators_resized_image_url( get_sub_field( 'afbeelding' )['url'] ?? '', 480 ) ); ?>" alt="<?php echo esc_attr( get_sub_field( 'afbeelding' )['alt'] ); ?>">
 													<?php endif; ?>
 												</div>
 												<div class="block-service__content h-100">

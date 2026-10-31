@@ -28,8 +28,13 @@ foreach ( $medewerkers as $medewerker ) {
 		<div class="row gy-2 align-items-stretch">
 			<div class="col-xxl-7 col-xl-8 col-lg-12">
 				<div class="home-hero-block-big position-relative rounded-3 overflow-hidden h-100 bg-white">
-					<?php if ( $hero_image = get_field( 'hero_image' ) ) : ?>
-						<?php echo wp_get_attachment_image( $hero_image['ID'], 'large', false, [ 'class' => 'img-abs-center' ] ); ?>
+					<?php if ( $hero_image = get_field( 'hero_image' ) ) :
+						$hero_url = $hero_image['url'] ?? '';
+						$hero_src_480  = creators_resized_image_url( $hero_url, 480 );
+						$hero_src_768  = creators_resized_image_url( $hero_url, 768 );
+						$hero_src_1200 = creators_resized_image_url( $hero_url, 1200 );
+					?>
+						<img class="img-abs-center" src="<?php echo esc_url( $hero_src_768 ); ?>" srcset="<?php echo esc_attr( $hero_src_480 . ' 480w, ' . $hero_src_768 . ' 768w, ' . $hero_src_1200 . ' 1200w' ); ?>" sizes="(max-width: 991px) 100vw, 50vw" alt="" decoding="async" fetchpriority="high">
 					<?php endif; ?>
 					<div class="home-hero-block__content text-start">
 						<?php

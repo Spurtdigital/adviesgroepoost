@@ -238,9 +238,9 @@ $advice_mood_photo     = get_field( 'advies_adviseur_sfeerfoto', 'options' );
 						<div class="advice-page__advisor bg-white rounded-3">
 							<div class="advice-page__advisor-media">
 								<?php if ( ! empty( $advice_mood_photo['ID'] ) ) : ?>
-									<?php echo wp_get_attachment_image( $advice_mood_photo['ID'], 'medium', false, [ 'class' => 'img-abs-center', 'alt' => esc_attr( $advice_mood_photo['alt'] ?? $advice_person['naam'] ?? '' ) ] ); ?>
+									<img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $advice_mood_photo['url'] ?? '', 480 ) ); ?>" alt="<?php echo esc_attr( $advice_mood_photo['alt'] ?? $advice_person['naam'] ?? '' ); ?>" loading="lazy" decoding="async">
 								<?php else : ?>
-									<?php echo wp_get_attachment_image( $advice_person['afbeelding']['ID'], 'medium', false, [ 'class' => 'img-abs-center', 'alt' => esc_attr( $advice_person['naam'] ?? '' ) ] ); ?>
+									<img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $advice_person['afbeelding']['url'] ?? '', 480 ) ); ?>" alt="<?php echo esc_attr( $advice_person['naam'] ?? '' ); ?>" loading="lazy" decoding="async">
 								<?php endif; ?>
 							</div>
 							<div class="advice-page__advisor-content">

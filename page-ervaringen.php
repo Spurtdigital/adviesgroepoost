@@ -31,7 +31,8 @@ get_header();
                             <div class="block-ervaring__media">
                                 <img
                                     loading="lazy"
-                                    src="<?php echo esc_url( $ervaring['afbeelding']['url'] ?? '' ); ?>"
+                                    decoding="async"
+                                    src="<?php echo esc_url( creators_resized_image_url( $ervaring['afbeelding']['url'] ?? '', 720 ) ); ?>"
                                     alt="<?php echo esc_attr( $ervaring['afbeelding']['title'] ?? '' ); ?>"
                                 >
                             </div>

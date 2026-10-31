@@ -5,7 +5,7 @@ $image = get_field( 'image' );
 <div class="block-dienst position-relative">
     <div class="block-dienst__media position-relative">
         <?php if ( ! empty( $image['ID'] ) ) : ?>
-            <?php echo wp_get_attachment_image( $image['ID'], 'large', false, [ 'class' => 'img-abs-center', 'loading' => 'lazy' ] ); ?>
+            <img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $image['url'] ?? '', 640 ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy" decoding="async">
         <?php endif; ?>
     </div>
     <div class="block-dienst__content">

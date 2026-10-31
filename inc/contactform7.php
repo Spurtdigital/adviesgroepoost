@@ -59,6 +59,69 @@ add_filter( 'wpcf7_form_elements', 'creators_cf7_add_classes' );
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 /**
+ * Bepaal of de huidige pagina een Contact Form 7-formulier weergeeft.
+ * CF7 laadt anders op elke pagina zijn JS/CSS én reCAPTCHA; dat scheelt fors
+ * door assets alleen te laden waar echt een formulier staat.
+ *
+ * @return bool
+ */
+function creators_page_has_contact_form() {
+	// Templates met een vast formulier.
+	if ( is_page_template( [ 'page-contact.php', 'page-advies.php', 'page-offertecheck.php' ] ) ) {
+		return true;
+	}
+
+	$post_id = get_queried_object_id();
+
+	if ( $post_id ) {
+		// Builder (flexible content) kan een 'layout05'-formulier bevatten.
+		foreach ( [ 'contentbuilder', 'field_648de36a2d1a9' ] as $selector ) {
+			$rows = get_field( $selector, $post_id );
+
+			if ( ! is_array( $rows ) ) {
+				continue;
+			}
+
+			foreach ( $rows as $row ) {
+				if ( 'layout05' === ( $row['acf_fc_layout'] ?? '' ) ) {
+					if ( ! empty( $row['formulier'] ) || ! empty( $row['cf7_form'] ) ) {
+						return true;
+					}
+				}
+			}
+		}
+	}
+
+	// Fallback: shortcode in de content.
+	$post = get_post( $post_id );
+
+	if ( $post && has_shortcode( $post->post_content, 'contact-form-7' ) ) {
+		return true;
+	}
+
+	return false;
+}
+
+add_filter( 'wpcf7_load_js', 'creators_page_has_contact_form' );
+add_filter( 'wpcf7_load_css', 'creators_page_has_contact_form' );
+add_filter( 'wpcf7_load_recaptcha', 'creators_page_has_contact_form' );
+
+/**
+ * Vangnet: verwijder reCAPTCHA-scripts op pagina's zonder formulier, ook als
+ * een andere plugin of CF7 ze alsnog in de wachtrij plaatst.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+	if ( creators_page_has_contact_form() ) {
+		return;
+	}
+
+	wp_dequeue_script( 'google-recaptcha' );
+	wp_dequeue_script( 'wpcf7-recaptcha' );
+	wp_deregister_script( 'google-recaptcha' );
+	wp_deregister_script( 'wpcf7-recaptcha' );
+}, 100 );
+
+/**
  * Het adviesformulier levert de gekozen diensten via JavaScript aan in het
  * veld #select-boxes. In de CF7-formulieren staat dit veld echter als
  * [checkbox diensten] zonder opties: dat rendert als een lege <span> zonder

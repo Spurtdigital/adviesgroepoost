@@ -59,12 +59,9 @@ $child_pages = get_pages(
 										<div class="block-post__media">
 											<?php if ( $featured_image_id ) : ?>
 												<?php
-												echo wp_get_attachment_image( $featured_image_id, 'medium_large', false, [
-													'class'   => 'img-abs-center',
-													'loading' => 'lazy',
-													'alt'     => get_the_title( $child_page->ID ),
-												] );
+												$featured_image_url = wp_get_attachment_image_url( $featured_image_id, 'full' );
 												?>
+												<img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $featured_image_url, 640 ) ); ?>" alt="<?php echo esc_attr( get_the_title( $child_page->ID ) ); ?>" loading="lazy" decoding="async">
 											<?php endif; ?>
 										</div>
 										<div class="block-post__content">

@@ -76,8 +76,9 @@ if ( is_array( $footer_top_image ) ) {
                         <?php if ( $footer_top_image_url ) : ?>
                             <img 
                                 class="img-abs-center"
-                                src="<?php echo esc_url( $footer_top_image_url ); ?>" 
+                                src="<?php echo esc_url( creators_resized_image_url( $footer_top_image_url, 800 ) ); ?>" 
                                 alt="<?php echo esc_attr( $footer_top_image_alt ); ?>"
+                                loading="lazy"
                             >
                         <?php endif; ?>
                     </div>

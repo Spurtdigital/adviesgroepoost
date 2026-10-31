@@ -23,12 +23,9 @@ $icon_url = is_array( $icon ) ? ( $icon['url'] ?? '' ) : '';
         <?php if($featured_img_id):?>
         <?php
         $post_image_class = $variant_alt ? 'img-abs-center--contain' : 'img-abs-center';
-        echo wp_get_attachment_image( $featured_img_id, 'medium_large', false, [
-            'class'   => $post_image_class,
-            'loading' => 'lazy',
-            'alt'     => get_the_title(),
-        ] );
+        $post_image_url = wp_get_attachment_image_url( $featured_img_id, 'full' );
         ?>
+        <img class="<?php echo esc_attr( $post_image_class ); ?>" src="<?php echo esc_url( creators_resized_image_url( $post_image_url, 640 ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy" decoding="async">
         <?php endif;?>
         <?php endif;?>
     </div>

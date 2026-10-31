@@ -13,7 +13,8 @@ get_header();
 
                 <?php if ( has_post_thumbnail() ) : ?>
                     <div class="product-hero__media rounded-3 overflow-hidden position-relative">
-                        <?php the_post_thumbnail( 'large', [ 'class' => 'img-abs-center' ] ); ?>
+                        <?php $kozijn_thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>
+                        <img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $kozijn_thumb_url, 1024 ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" decoding="async" fetchpriority="high">
                     </div>
                 <?php endif; ?>
             </div>
@@ -62,7 +63,7 @@ get_header();
                         <?php spurt_add_btns( [ [ 'link' => $kozijn_advies_link, 'color' => 'outline-dark' ] ], '', 'sm' ); ?>
                     <?php endif; ?>
                     <?php if ( $kozijn_adviseur ) : ?>
-                        <?php echo wp_get_attachment_image( $kozijn_adviseur['afbeelding']['ID'], 'medium', false, [ 'class' => 'img-fluid', 'alt' => esc_attr( $kozijn_adviseur['naam'] ?? '' ) ] ); ?>
+                        <img class="img-fluid" src="<?php echo esc_url( creators_resized_image_url( $kozijn_adviseur['afbeelding']['url'] ?? '', 400 ) ); ?>" alt="<?php echo esc_attr( $kozijn_adviseur['naam'] ?? '' ); ?>" loading="lazy" decoding="async">
                     <?php endif; ?>
                 </div>
                 <?php endif; ?>
@@ -109,7 +110,8 @@ if ( ! $kozijn_parent_id ) {
                             <div class="block-kozijn bg-white rounded-3">
                                 <?php if ( has_post_thumbnail() ) : ?>
                                     <div class="block-kozijn__media position-relative">
-                                        <?php the_post_thumbnail( 'medium', [ 'class' => 'img-abs-center' ] ); ?>
+                                        <?php $kozijn_child_thumb = get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>
+                                        <img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $kozijn_child_thumb, 640 ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" loading="lazy" decoding="async">
                                     </div>
                                 <?php endif; ?>
 
@@ -129,7 +131,8 @@ if ( ! $kozijn_parent_id ) {
                                 <div class="block-kozijn bg-white rounded-3">
                                     <?php if ( get_sub_field( 'afbeelding' ) ) : ?>
                                         <div class="block-kozijn__media position-relative">
-                                            <?php echo wp_get_attachment_image( get_sub_field( 'afbeelding' )['ID'], 'medium', false, [ 'class' => 'img-abs-center', 'alt' => esc_attr( get_sub_field( 'afbeelding' )['alt'] ?? get_sub_field( 'titel' ) ) ] ); ?>
+                                            <?php $kozijn_block_img = get_sub_field( 'afbeelding' ); ?>
+                                            <img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $kozijn_block_img['url'] ?? '', 640 ) ); ?>" alt="<?php echo esc_attr( $kozijn_block_img['alt'] ?? get_sub_field( 'titel' ) ); ?>" loading="lazy" decoding="async">
                                         </div>
                                     <?php endif; ?>
 
@@ -189,9 +192,9 @@ if ( empty( $kozijn_split_image['ID'] ) ) {
                             <?php if ( ! empty( $kozijn_split_image ) ) : ?>
                                 <div class="content-split__media position-relative rounded-3 overflow-hidden">
                                     <?php if ( ! empty( $kozijn_split_image['ID'] ) ) : ?>
-                                        <?php echo wp_get_attachment_image( $kozijn_split_image['ID'], 'large', false, [ 'class' => 'img-abs-center', 'alt' => esc_attr( $kozijn_split_image['alt'] ?? get_field( 'kozijn_split_titel' ) ) ] ); ?>
+                                        <img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $kozijn_split_image['url'] ?? '', 720 ) ); ?>" alt="<?php echo esc_attr( $kozijn_split_image['alt'] ?? get_field( 'kozijn_split_titel' ) ); ?>" loading="lazy" decoding="async">
                                     <?php elseif ( ! empty( $kozijn_split_image['url'] ) ) : ?>
-                                        <img loading="lazy" class="img-abs-center" src="<?php echo esc_url( $kozijn_split_image['url'] ); ?>" alt="<?php echo esc_attr( $kozijn_split_image['alt'] ?? get_field( 'kozijn_split_titel' ) ); ?>">
+                                        <img loading="lazy" decoding="async" class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $kozijn_split_image['url'], 720 ) ); ?>" alt="<?php echo esc_attr( $kozijn_split_image['alt'] ?? get_field( 'kozijn_split_titel' ) ); ?>">
                                     <?php endif; ?>
                                 </div>
                             <?php endif; ?>

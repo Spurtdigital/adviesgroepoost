@@ -124,7 +124,7 @@
 															$img_url = is_array($menu_image) ? $menu_image['url'] : $menu_image;
 															$img_alt = is_array($menu_image) ? ($menu_image['alt'] ?? '') : '';
 															?>
-															<img class="img-abs-center" src="<?php echo esc_url($img_url); ?>" alt="<?php echo esc_attr($img_alt); ?>">
+															<img class="img-abs-center" src="<?php echo esc_url( creators_resized_image_url( $img_url, 480 ) ); ?>" alt="<?php echo esc_attr($img_alt); ?>" loading="lazy" decoding="async">
 															<?php if (get_sub_field('image_title')): ?>
 																<span><?php echo esc_html(get_sub_field('image_title')); ?></span>
 															<?php endif; ?>

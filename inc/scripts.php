@@ -1,12 +1,6 @@
 <?php
 
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_style(
-		'creators-fonts',
-		'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap',
-		[],
-		null
-	);
 	$creators_css_path = CREATORS_THEME_DIR . '/dist/css/styles.css';
 	$creators_js_path  = CREATORS_THEME_DIR . '/dist/js/app.js';
 
@@ -33,3 +27,15 @@ add_filter( 'script_loader_tag', function( $tag, $handle, $src ) {
 	}
 	return $tag;
 }, 10, 3 );
+
+// Load Font Awesome non-blocking: icons zijn niet kritiek voor de eerste paint.
+add_filter( 'style_loader_tag', function( $tag, $handle ) {
+	if ( 'font-awesome-pro' !== $handle ) {
+		return $tag;
+	}
+
+	$tag = str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $tag );
+	$tag .= '<noscript><link rel="stylesheet" href="' . esc_url( CREATORS_THEME_URI . '/assets/fontawesome/css/all.min.css' ) . '"></noscript>';
+
+	return $tag;
+}, 10, 2 );

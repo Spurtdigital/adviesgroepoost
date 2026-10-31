@@ -8,6 +8,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Genereer een verkleinde (WebP) afbeeldings-URL via spurt_image() met een
+ * veilige fallback naar de originele URL als de plugin-functie niet bestaat.
+ *
+ * @param string $url   Originele afbeeldings-URL.
+ * @param int    $width Gewenste breedte in pixels.
+ * @return string
+ */
+function creators_resized_image_url( $url, $width ) {
+	if ( empty( $url ) ) {
+		return '';
+	}
+
+	if ( function_exists( 'spurt_image' ) ) {
+		return spurt_image( $url, $width, 9999 );
+	}
+
+	return $url;
+}
+
+/**
  * Find the permalink of a page that uses a given page template.
  *
  * @param string $template Template filename, e.g. 'page-oplossingen.php'.
@@ -86,6 +106,30 @@ function creators_markdown_inline( $content ) {
 
 	return $html;
 }
+
+/**
+ * Preload de LCP-afbeelding (hero) op de homepage zodat de browser het beeld
+ * eerder kan downloaden, zonder dat het door render-blocking CSS wordt opgehouden.
+ */
+function creators_preload_home_hero() {
+	if ( ! function_exists( 'get_field' ) || ! is_page_template( 'page-home.php' ) ) {
+		return;
+	}
+
+	$hero = get_field( 'hero_image' );
+
+	if ( empty( $hero['url'] ) ) {
+		return;
+	}
+
+	$url     = $hero['url'];
+	$src_480  = creators_resized_image_url( $url, 480 );
+	$src_768  = creators_resized_image_url( $url, 768 );
+	$src_1200 = creators_resized_image_url( $url, 1200 );
+
+	echo '<link rel="preload" as="image" href="' . esc_url( $src_768 ) . '" imagesrcset="' . esc_attr( $src_480 . ' 480w, ' . $src_768 . ' 768w, ' . $src_1200 . ' 1200w' ) . '" imagesizes="(max-width: 991px) 100vw, 50vw" fetchpriority="high">' . "\n";
+}
+add_action( 'wp_head', 'creators_preload_home_hero', 1 );
 
 /**
  * Willekeurige fallback-afbeelding uit de thema-optie "Builder fallback media".

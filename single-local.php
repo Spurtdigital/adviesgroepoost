@@ -89,7 +89,7 @@ if ( ! is_array( $local_header_usps ) || empty( $local_header_usps ) ) {
 					?>
 
 					<?php if ( is_array( $local_header_person_image ) && ! empty( $local_header_person_image['url'] ) ) : ?>
-						<?php echo wp_get_attachment_image( $local_header_person_image['ID'] ?? 0, 'medium', false, [ 'class' => 'img-fluid', 'alt' => esc_attr( $local_header_person_name ) ] ); ?>
+						<img class="img-fluid" src="<?php echo esc_url( creators_resized_image_url( $local_header_person_image['url'] ?? '', 400 ) ); ?>" alt="<?php echo esc_attr( $local_header_person_name ); ?>" loading="lazy" decoding="async">
 					<?php endif; ?>
 				</div>
 			</div>
@@ -170,7 +170,7 @@ $render_local_cta = function() {
 
 						<div class="content-cta__media">
 							<?php if ( $cta_image_url ) : ?>
-								<img loading="lazy" src="<?php echo esc_url( $cta_image_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
+								<img loading="lazy" decoding="async" src="<?php echo esc_url( creators_resized_image_url( $cta_image_url, 720 ) ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
 							<?php endif; ?>
 						</div>
 					</div>
